@@ -74,106 +74,77 @@
     "text": "Choose where to go:\n\nLayer 1 AFP Documentation"
   },
   {
-    "objectID": "afp copy/index.html",
-    "href": "afp copy/index.html",
+    "objectID": "oracles.html",
+    "href": "oracles.html",
+    "title": "Oracles",
+    "section": "",
+    "text": "How to Integrate an Oracle\nOracle Interface\n\nAutonity exposes a uniform oracle interface that third parties can seamlessly integrate with. It is up to the product builder to define which oracle to source the underlying data from for a particular product. This allows Autonity to be oracle agnostic.\nHowever, initial reference implementations will be of the optimistic oracle type. This strategy works because the initial suite of products that will be released will be Dated Futures, which require a single final settlement price to be submitted to settle the product at expiry.",
+    "crumbs": [
+      "Autonity Futures Protocol",
+      "Oracles"
+    ]
+  },
+  {
+    "objectID": "oracles.html#sub-sections",
+    "href": "oracles.html#sub-sections",
+    "title": "Oracles",
+    "section": "",
+    "text": "How to Integrate an Oracle\nOracle Interface\n\nAutonity exposes a uniform oracle interface that third parties can seamlessly integrate with. It is up to the product builder to define which oracle to source the underlying data from for a particular product. This allows Autonity to be oracle agnostic.\nHowever, initial reference implementations will be of the optimistic oracle type. This strategy works because the initial suite of products that will be released will be Dated Futures, which require a single final settlement price to be submitted to settle the product at expiry.",
+    "crumbs": [
+      "Autonity Futures Protocol",
+      "Oracles"
+    ]
+  },
+  {
+    "objectID": "trading.html",
+    "href": "trading.html",
+    "title": "Trading",
+    "section": "",
+    "text": "Trade Execution and Clearing\nCross-Venue Cross-Margining\nIntents",
+    "crumbs": [
+      "Autonity Futures Protocol",
+      "Trading"
+    ]
+  },
+  {
+    "objectID": "trading.html#sub-sections",
+    "href": "trading.html#sub-sections",
+    "title": "Trading",
+    "section": "",
+    "text": "Trade Execution and Clearing\nCross-Venue Cross-Margining\nIntents",
+    "crumbs": [
+      "Autonity Futures Protocol",
+      "Trading"
+    ]
+  },
+  {
+    "objectID": "trading-protocols.html",
+    "href": "trading-protocols.html",
+    "title": "Trading Protocols",
+    "section": "",
+    "text": "How to Integrate a Trading Protocol\nThe Roles of Trading Protocols\nFallback Mechanism",
+    "crumbs": [
+      "Autonity Futures Protocol",
+      "Trading Protocols"
+    ]
+  },
+  {
+    "objectID": "trading-protocols.html#sub-sections",
+    "href": "trading-protocols.html#sub-sections",
+    "title": "Trading Protocols",
+    "section": "",
+    "text": "How to Integrate a Trading Protocol\nThe Roles of Trading Protocols\nFallback Mechanism",
+    "crumbs": [
+      "Autonity Futures Protocol",
+      "Trading Protocols"
+    ]
+  },
+  {
+    "objectID": "afp/index.html",
+    "href": "afp/index.html",
     "title": "AFP Documentation",
     "section": "",
     "text": "Welcome to the Autonomous Futures Protocol (AFP) documentation site. Explore the documentation to learn more about the protocol’s features and how to use it."
-  },
-  {
-    "objectID": "afp-sdk-reference.html",
-    "href": "afp-sdk-reference.html",
-    "title": "AFP SDK Reference",
-    "section": "",
-    "text": "Coming soon.",
-    "crumbs": [
-      "For Developers",
-      "AFP SDK Reference"
-    ]
-  },
-  {
-    "objectID": "margining.html",
-    "href": "margining.html",
-    "title": "Margining",
-    "section": "",
-    "text": "IMR is a product parameter and is expressed as a percentage under 100% (eg 0.30). For a product Ψ. Initial Margin (IM) relates to a trade j and is a monetary amount in the product Ψ’s Price Quotation units. It is defined conditionally on the type of position change:\n\nif the position increases: IM[Ψ][j] = IMR * POINT_VALUE * p[j] * abs(q[j])\nif the position reverses: IM[Ψ][j] = IMR * POINT_VALUE * p[j] * abs(q[j] + Q[j-1])",
-    "crumbs": [
-      "Autonity Futures Protocol",
-      "Clearing System",
-      "Margining"
-    ]
-  },
-  {
-    "objectID": "margining.html#initial-margin-requirement-imr",
-    "href": "margining.html#initial-margin-requirement-imr",
-    "title": "Margining",
-    "section": "",
-    "text": "IMR is a product parameter and is expressed as a percentage under 100% (eg 0.30). For a product Ψ. Initial Margin (IM) relates to a trade j and is a monetary amount in the product Ψ’s Price Quotation units. It is defined conditionally on the type of position change:\n\nif the position increases: IM[Ψ][j] = IMR * POINT_VALUE * p[j] * abs(q[j])\nif the position reverses: IM[Ψ][j] = IMR * POINT_VALUE * p[j] * abs(q[j] + Q[j-1])",
-    "crumbs": [
-      "Autonity Futures Protocol",
-      "Clearing System",
-      "Margining"
-    ]
-  },
-  {
-    "objectID": "margining.html#maintenance-margin-requirement-mmr",
-    "href": "margining.html#maintenance-margin-requirement-mmr",
-    "title": "Margining",
-    "section": "Maintenance Margin Requirement (MMR)",
-    "text": "Maintenance Margin Requirement (MMR)\nMMR is a product parameter and is expressed as a percentage under 100% (eg 0.20). Maintenance Margin relates to a position and is a monetary amount in the product’s Price Quotation units and is defined as: MM[Ψ][j] = MMR * abs(B[j])\nMaintenance Margin Used (MMU) is defined for the n products in which the margin account holder has a non-zero position: MMU[k] = sum(MM[1][k],.., MM[n][k]) where k is an index over all trades and n products in a Margin Account.\nMaintenance Margin Available (MMA) is then defined as: MMA[k] = max(MAE - MMU[k], 0). This is the amount of collateral that can be used to fund new trades.",
-    "crumbs": [
-      "Autonity Futures Protocol",
-      "Clearing System",
-      "Margining"
-    ]
-  },
-  {
-    "objectID": "margining.html#initial-margin-check",
-    "href": "margining.html#initial-margin-check",
-    "title": "Margining",
-    "section": "Initial Margin Check",
-    "text": "Initial Margin Check\nIf a trade increases an account’s position size, it must be the case that IM &lt;= MMA in order for the trade to settle. If IM &gt; MMA, the trade will fail. For trades that decrease position size, the check for IM is ignored.\nIf a trade reverses an account’s position, then the checks are split into the two following operations:\n\nFirst, the account’s position is decreased to zero, where the IM check is ignored. And the MAE, MMU, MMA (whichever is stored on chain) for the account is updated.\nSecond, the account’s position is increased, at which point the IM check is applied.\n\nIn the case of multiple position changes as part of a single trade, the IM check is performed as follows:\n\nAll reversing trades are broken down into a decreasing trade and an increasing trade\nThe account’s MMU is decreased by the amount freed up by the decreasing trade:\nMMU' = MMU - sum(MMR[j] * (abs(B[j]) - abs(B'[j])))\nWhere:\n   - `B'[j]` is the cost basis after the trade for product `Ψ[j]`. \n   - `B[j]` is the cost basis before the trade for product `Ψ[j]`. \n   - `MMR[j]` is the MMR for the product `Ψ[j]`.\nNote that here MMU' is not strictly equal to the MMU after the trade, as it does not take into account the new Maintenance Margin for the increasing trades. It is only an intermediate value used to perform the IM check.\nThe IM check is performed on the increasing trades:\nsum(IM[Ψ][j]) &lt;= MAE' - MMU'\nWhere MAE' is the MAE after the trade. If this check fails, the trade is reverted.\nIf MU &gt;= 100% (equivalently, MMA = 0), the account enters LIQUIDATABLE state and any non-zero product position in the account may get liquidated in whole or part by the clearing system’s liquidation auction mechanism.",
-    "crumbs": [
-      "Autonity Futures Protocol",
-      "Clearing System",
-      "Margining"
-    ]
-  },
-  {
-    "objectID": "how-to-integrate-an-oracle.html",
-    "href": "how-to-integrate-an-oracle.html",
-    "title": "How to Integrate an Oracle",
-    "section": "",
-    "text": "The AFP is Oracle agnostic, meaning that as long as a Final Settlement Value (FSV) exists after the earliestFSPSubmissionTime on an oracle, the clearing system will fetch it and use it to closeout any outstanding positions via the Final Settlement Process.",
-    "crumbs": [
-      "Autonity Futures Protocol",
-      "Oracles",
-      "How to Integrate an Oracle"
-    ]
-  },
-  {
-    "objectID": "how-to-integrate-an-oracle.html#conforming-to-the-afp",
-    "href": "how-to-integrate-an-oracle.html#conforming-to-the-afp",
-    "title": "How to Integrate an Oracle",
-    "section": "Conforming to the AFP",
-    "text": "Conforming to the AFP\nAny oracle implementation must implement the AFP Oracle interface. :\nfunction resolve(bytes32 productId, bytes memory oracleCalldata) external view returns (int);\nWhere productId is used to resolve the correct FSV (as a single oracle may be providing the FSV to several products simultaneously), and oracleCalldata is used to pass any additional required logic to the oracle (such as referencing a particular element of a timeseries).",
-    "crumbs": [
-      "Autonity Futures Protocol",
-      "Oracles",
-      "How to Integrate an Oracle"
-    ]
-  },
-  {
-    "objectID": "how-to-integrate-an-oracle.html#implementation-with-a-product",
-    "href": "how-to-integrate-an-oracle.html#implementation-with-a-product",
-    "title": "How to Integrate an Oracle",
-    "section": "Implementation with a product",
-    "text": "Implementation with a product\nIt is up to a Product Builder to assign a particular oracle as the FSV resolver. Hence the Product Builder should ensure that the oracle is aware of its responsibilities, and the form in which the FSV is expected to be supplied. Such details can be found in the Product Specification:\n    struct OracleSpecification {\n        address oracleAddress;\n        uint8 fsvDecimals;\n        int fspAlpha;\n        int fspBeta;\n        bytes fsvCalldata;\n    }",
-    "crumbs": [
-      "Autonity Futures Protocol",
-      "Oracles",
-      "How to Integrate an Oracle"
-    ]
   },
   {
     "objectID": "liquidation-agent.html",
@@ -682,69 +653,98 @@
     "text": "Coming soon."
   },
   {
-    "objectID": "trading-protocols.html",
-    "href": "trading-protocols.html",
-    "title": "Trading Protocols",
+    "objectID": "how-to-integrate-an-oracle.html",
+    "href": "how-to-integrate-an-oracle.html",
+    "title": "How to Integrate an Oracle",
     "section": "",
-    "text": "How to Integrate a Trading Protocol\nThe Roles of Trading Protocols\nFallback Mechanism",
+    "text": "The AFP is Oracle agnostic, meaning that as long as a Final Settlement Value (FSV) exists after the earliestFSPSubmissionTime on an oracle, the clearing system will fetch it and use it to closeout any outstanding positions via the Final Settlement Process.",
     "crumbs": [
       "Autonity Futures Protocol",
-      "Trading Protocols"
+      "Oracles",
+      "How to Integrate an Oracle"
     ]
   },
   {
-    "objectID": "trading-protocols.html#sub-sections",
-    "href": "trading-protocols.html#sub-sections",
-    "title": "Trading Protocols",
-    "section": "",
-    "text": "How to Integrate a Trading Protocol\nThe Roles of Trading Protocols\nFallback Mechanism",
+    "objectID": "how-to-integrate-an-oracle.html#conforming-to-the-afp",
+    "href": "how-to-integrate-an-oracle.html#conforming-to-the-afp",
+    "title": "How to Integrate an Oracle",
+    "section": "Conforming to the AFP",
+    "text": "Conforming to the AFP\nAny oracle implementation must implement the AFP Oracle interface. :\nfunction resolve(bytes32 productId, bytes memory oracleCalldata) external view returns (int);\nWhere productId is used to resolve the correct FSV (as a single oracle may be providing the FSV to several products simultaneously), and oracleCalldata is used to pass any additional required logic to the oracle (such as referencing a particular element of a timeseries).",
     "crumbs": [
       "Autonity Futures Protocol",
-      "Trading Protocols"
+      "Oracles",
+      "How to Integrate an Oracle"
     ]
   },
   {
-    "objectID": "trading.html",
-    "href": "trading.html",
-    "title": "Trading",
-    "section": "",
-    "text": "Trade Execution and Clearing\nCross-Venue Cross-Margining\nIntents",
+    "objectID": "how-to-integrate-an-oracle.html#implementation-with-a-product",
+    "href": "how-to-integrate-an-oracle.html#implementation-with-a-product",
+    "title": "How to Integrate an Oracle",
+    "section": "Implementation with a product",
+    "text": "Implementation with a product\nIt is up to a Product Builder to assign a particular oracle as the FSV resolver. Hence the Product Builder should ensure that the oracle is aware of its responsibilities, and the form in which the FSV is expected to be supplied. Such details can be found in the Product Specification:\n    struct OracleSpecification {\n        address oracleAddress;\n        uint8 fsvDecimals;\n        int fspAlpha;\n        int fspBeta;\n        bytes fsvCalldata;\n    }",
     "crumbs": [
       "Autonity Futures Protocol",
-      "Trading"
+      "Oracles",
+      "How to Integrate an Oracle"
     ]
   },
   {
-    "objectID": "trading.html#sub-sections",
-    "href": "trading.html#sub-sections",
-    "title": "Trading",
+    "objectID": "margining.html",
+    "href": "margining.html",
+    "title": "Margining",
     "section": "",
-    "text": "Trade Execution and Clearing\nCross-Venue Cross-Margining\nIntents",
+    "text": "IMR is a product parameter and is expressed as a percentage under 100% (eg 0.30). For a product Ψ. Initial Margin (IM) relates to a trade j and is a monetary amount in the product Ψ’s Price Quotation units. It is defined conditionally on the type of position change:\n\nif the position increases: IM[Ψ][j] = IMR * POINT_VALUE * p[j] * abs(q[j])\nif the position reverses: IM[Ψ][j] = IMR * POINT_VALUE * p[j] * abs(q[j] + Q[j-1])",
     "crumbs": [
       "Autonity Futures Protocol",
-      "Trading"
+      "Clearing System",
+      "Margining"
     ]
   },
   {
-    "objectID": "oracles.html",
-    "href": "oracles.html",
-    "title": "Oracles",
+    "objectID": "margining.html#initial-margin-requirement-imr",
+    "href": "margining.html#initial-margin-requirement-imr",
+    "title": "Margining",
     "section": "",
-    "text": "How to Integrate an Oracle\nOracle Interface\n\nAutonity exposes a uniform oracle interface that third parties can seamlessly integrate with. It is up to the product builder to define which oracle to source the underlying data from for a particular product. This allows Autonity to be oracle agnostic.\nHowever, initial reference implementations will be of the optimistic oracle type. This strategy works because the initial suite of products that will be released will be Dated Futures, which require a single final settlement price to be submitted to settle the product at expiry.",
+    "text": "IMR is a product parameter and is expressed as a percentage under 100% (eg 0.30). For a product Ψ. Initial Margin (IM) relates to a trade j and is a monetary amount in the product Ψ’s Price Quotation units. It is defined conditionally on the type of position change:\n\nif the position increases: IM[Ψ][j] = IMR * POINT_VALUE * p[j] * abs(q[j])\nif the position reverses: IM[Ψ][j] = IMR * POINT_VALUE * p[j] * abs(q[j] + Q[j-1])",
     "crumbs": [
       "Autonity Futures Protocol",
-      "Oracles"
+      "Clearing System",
+      "Margining"
     ]
   },
   {
-    "objectID": "oracles.html#sub-sections",
-    "href": "oracles.html#sub-sections",
-    "title": "Oracles",
-    "section": "",
-    "text": "How to Integrate an Oracle\nOracle Interface\n\nAutonity exposes a uniform oracle interface that third parties can seamlessly integrate with. It is up to the product builder to define which oracle to source the underlying data from for a particular product. This allows Autonity to be oracle agnostic.\nHowever, initial reference implementations will be of the optimistic oracle type. This strategy works because the initial suite of products that will be released will be Dated Futures, which require a single final settlement price to be submitted to settle the product at expiry.",
+    "objectID": "margining.html#maintenance-margin-requirement-mmr",
+    "href": "margining.html#maintenance-margin-requirement-mmr",
+    "title": "Margining",
+    "section": "Maintenance Margin Requirement (MMR)",
+    "text": "Maintenance Margin Requirement (MMR)\nMMR is a product parameter and is expressed as a percentage under 100% (eg 0.20). Maintenance Margin relates to a position and is a monetary amount in the product’s Price Quotation units and is defined as: MM[Ψ][j] = MMR * abs(B[j])\nMaintenance Margin Used (MMU) is defined for the n products in which the margin account holder has a non-zero position: MMU[k] = sum(MM[1][k],.., MM[n][k]) where k is an index over all trades and n products in a Margin Account.\nMaintenance Margin Available (MMA) is then defined as: MMA[k] = max(MAE - MMU[k], 0). This is the amount of collateral that can be used to fund new trades.",
     "crumbs": [
       "Autonity Futures Protocol",
-      "Oracles"
+      "Clearing System",
+      "Margining"
+    ]
+  },
+  {
+    "objectID": "margining.html#initial-margin-check",
+    "href": "margining.html#initial-margin-check",
+    "title": "Margining",
+    "section": "Initial Margin Check",
+    "text": "Initial Margin Check\nIf a trade increases an account’s position size, it must be the case that IM &lt;= MMA in order for the trade to settle. If IM &gt; MMA, the trade will fail. For trades that decrease position size, the check for IM is ignored.\nIf a trade reverses an account’s position, then the checks are split into the two following operations:\n\nFirst, the account’s position is decreased to zero, where the IM check is ignored. And the MAE, MMU, MMA (whichever is stored on chain) for the account is updated.\nSecond, the account’s position is increased, at which point the IM check is applied.\n\nIn the case of multiple position changes as part of a single trade, the IM check is performed as follows:\n\nAll reversing trades are broken down into a decreasing trade and an increasing trade\nThe account’s MMU is decreased by the amount freed up by the decreasing trade:\nMMU' = MMU - sum(MMR[j] * (abs(B[j]) - abs(B'[j])))\nWhere:\n   - `B'[j]` is the cost basis after the trade for product `Ψ[j]`. \n   - `B[j]` is the cost basis before the trade for product `Ψ[j]`. \n   - `MMR[j]` is the MMR for the product `Ψ[j]`.\nNote that here MMU' is not strictly equal to the MMU after the trade, as it does not take into account the new Maintenance Margin for the increasing trades. It is only an intermediate value used to perform the IM check.\nThe IM check is performed on the increasing trades:\nsum(IM[Ψ][j]) &lt;= MAE' - MMU'\nWhere MAE' is the MAE after the trade. If this check fails, the trade is reverted.\nIf MU &gt;= 100% (equivalently, MMA = 0), the account enters LIQUIDATABLE state and any non-zero product position in the account may get liquidated in whole or part by the clearing system’s liquidation auction mechanism.",
+    "crumbs": [
+      "Autonity Futures Protocol",
+      "Clearing System",
+      "Margining"
+    ]
+  },
+  {
+    "objectID": "afp-sdk-reference.html",
+    "href": "afp-sdk-reference.html",
+    "title": "AFP SDK Reference",
+    "section": "",
+    "text": "Coming soon.",
+    "crumbs": [
+      "For Developers",
+      "AFP SDK Reference"
     ]
   },
   {
