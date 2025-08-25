@@ -110,7 +110,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../afp/about-afp.html">Autonity Futures Protocol</a></li><li class="breadcrumb-item"><a href="../afp/about-afp.html">About the AFP</a></li><li class="breadcrumb-item"><a href="../afp/architecture.html">Overall Architecture</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../afp/about-afp.html">Autonomous Futures Protocol</a></li><li class="breadcrumb-item"><a href="../afp/about-afp.html">About the AFP</a></li><li class="breadcrumb-item"><a href="../afp/architecture.html">Overall Architecture</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -133,7 +133,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
- <span class="menu-text">Autonity Futures Protocol</span></a>
+ <span class="menu-text">Autonomous Futures Protocol</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -446,7 +446,7 @@ ul.task-list li input[type="checkbox"] {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../afp/about-afp.html">Autonity Futures Protocol</a></li><li class="breadcrumb-item"><a href="../afp/about-afp.html">About the AFP</a></li><li class="breadcrumb-item"><a href="../afp/architecture.html">Overall Architecture</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../afp/about-afp.html">Autonomous Futures Protocol</a></li><li class="breadcrumb-item"><a href="../afp/about-afp.html">About the AFP</a></li><li class="breadcrumb-item"><a href="../afp/architecture.html">Overall Architecture</a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title">Overall Architecture</h1>
 </div>
@@ -466,7 +466,7 @@ ul.task-list li input[type="checkbox"] {
 
 
 <p>The AFP can be broken down into distinct components with subsequent sections of the documentation going into more detail on each.</p>
-<p><img src="images/overall_architecture.png" class="img-fluid"></p>
+<p><img src="../images/overall_architecture.png" class="img-fluid"></p>
 <section id="product-builder" class="level2">
 <h2 class="anchored" data-anchor-id="product-builder">Product Builder</h2>
 <p>The Product Builder is responsible for defining a Product Specification that it will then submit to the Clearing System. For that Product Specification to be successfully submitted, automatic verification and validation checks must pass before it can go live. It is important to note that any address on Autonity can define and submit a Product Specification with the entire process being permissionless.</p>
@@ -474,12 +474,12 @@ ul.task-list li input[type="checkbox"] {
 <section id="trading-protocols" class="level2">
 <h2 class="anchored" data-anchor-id="trading-protocols">Trading Protocols</h2>
 <p>Once a Product has been created, and it goes live, it is up to the discretion of Trading Protocols to list an individual product and create an active market in it. Hence Trading Protocols are a crucial component of the overall architecture and for the success of a product.</p>
-<p>Trading Protocols are third-party protocols that integrate with the clearing system where a product has been created by a Product Builder. The clearing system does not enforce any particular trading modality, meaning that the same product could be traded on a Central Limit Order Book (e.g.&nbsp;Binance, Bybit, OKX), an Automatic Market Maker (e.g.&nbsp;Uniswap), a Frequent Batch Auction (e.g.&nbsp;CoW Swap), a Request-for-quote protocol (e.g.&nbsp;Airswap), or any other type of trading protocol the community wishes to deploy.</p>
-<p>Trading Protocol integration with the clearing system is also a permissionless process meaning that any trading protocol that wishes to make a market in a product can do so. The clearing system simply expects trades to be submitted in a standard form that it can interpret.</p>
+<p>Trading Protocols are third-party protocols that integrate with the clearing system where a product has been created by a Product Builder. The clearing system does not enforce any particular trading modality, meaning that the same product could be traded on a Central Limit Order Book (e.g.&nbsp;Binance, Bybit, OKX), an Automatic Market Maker (e.g.&nbsp;Uniswap), a Request-for-quote protocol (e.g.&nbsp;Airswap), or any other type of trading protocol the community wishes to deploy.</p>
+<p>Integrating a Trading Protocol with the clearing system is a permissionless process meaning that any trading protocol that wishes to make a market in a product can do so as long as the trading protocol interface expected by the clearing system is implemented.</p>
 </section>
 <section id="margin-accounts" class="level2">
 <h2 class="anchored" data-anchor-id="margin-accounts">Margin Accounts</h2>
-<p>Once a product has been created, and has been listed by a Trading Protocol, traders can start taking positions in it. However, seeing as the AFP is a futures protocol, a margin account funded with collateral is first required to open any positions a trader wants to take on. Such Margin Accounts are native to the clearing system which allows them to be used across any trading protocol, allowing cross-margining not just between products in the same trading protocol (as is the current state of futures in TradFi and DeFi) but across all trading protocols. This means that the profits of a position opened in a CLOB trading protocol, could be used to fund another position a trader wants to open on an AMM in another product.</p>
+<p>Once a product has been created, and has been listed by a Trading Protocol, traders can start taking positions in it. However, seeing as the AFP is a futures protocol, a margin account with collateral is required to open positions. Such Margin Accounts are native to the clearing system which allows them to be used across any trading protocol, allowing cross-margining not just between products in the same trading protocol (as is the current state of futures in TradFi and DeFi) but across all trading protocols. This means for example, that the profits of a position opened on a CLOB, could be used to fund another position on an AMM.</p>
 <p>After a trader has funded a Margin Account, they are ready to start trading.</p>
 <p>The AFP uses intents to express a trader’s intention to place an order – meaning that if a trader wishes to go long Product A, they sign an intent and submit it to their desired trading protocol. When the order is filled and a trade occurs, the Trading Protocol sends this on-chain to the clearing system. The clearing system then performs verification checks on the submitted trade structure and ensures that the trade can clear.</p>
 </section>

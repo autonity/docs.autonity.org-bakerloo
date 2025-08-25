@@ -113,7 +113,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../afp/about-afp.html">Autonity Futures Protocol</a></li><li class="breadcrumb-item"><a href="../afp/clearing-system.html">Clearing System</a></li><li class="breadcrumb-item"><a href="../afp/liquidation.html">Liquidation</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../afp/about-afp.html">Autonomous Futures Protocol</a></li><li class="breadcrumb-item"><a href="../afp/clearing-system.html">Clearing System</a></li><li class="breadcrumb-item"><a href="../afp/liquidation.html">Liquidation</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -136,7 +136,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
- <span class="menu-text">Autonity Futures Protocol</span></a>
+ <span class="menu-text">Autonomous Futures Protocol</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -450,7 +450,7 @@ ul.task-list li input[type="checkbox"] {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../afp/about-afp.html">Autonity Futures Protocol</a></li><li class="breadcrumb-item"><a href="../afp/clearing-system.html">Clearing System</a></li><li class="breadcrumb-item"><a href="../afp/liquidation.html">Liquidation</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../afp/about-afp.html">Autonomous Futures Protocol</a></li><li class="breadcrumb-item"><a href="../afp/clearing-system.html">Clearing System</a></li><li class="breadcrumb-item"><a href="../afp/liquidation.html">Liquidation</a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title">Liquidation</h1>
 </div>
@@ -511,11 +511,10 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="liquidation-auction-bid-process">Liquidation Auction Bid Process</h2>
 <p>Once a liquidation auction has begun, auction bids can be processed. When the liquidatable account’s position is long, the account is the sell-side of the auction and the auction’s bidders are the buy-side of the auction. When the liquidatable account’s position is short, the account is the buy-side of the auction and the auction’s bidders are the sell-side of the auction. Liquidators will provide a full list of prices and quantities for positions they are willing to take over from the liquidatable account. A liquidation bid request includes:</p>
 <p><code>function bidAuction(address marginAccountID, address collateralToken, BidData[] calldata bids) external notSelf(marginAccountID)</code></p>
-<p>See <reference to="" natspec="" documentation="" of="" the="" function=""> for more details.</reference></p>
 <p>Process:</p>
 <ol type="1">
 <li>Perform a <a href="#liquidation-auction-bid-validation">Liquidation Auction Bid Validation Check</a> on the Liquidation Auction Bid. If it fails, the process fails.</li>
-<li>Run an <a href="../margin-intent-accounts.qmd#margin-account-equity-mae-check">MAE Check</a> on the liquidator’s Margin Account for the corresponding Collateral Asset and the specified products and prices. In case of failure, the bid is rejected.</li>
+<li>Run an <a href="../afp/margin-intent-accounts.html#margin-account-equity-mae-check">MAE Check</a> on the liquidator’s Margin Account for the corresponding Collateral Asset and the specified products and prices. In case of failure, the bid is rejected.</li>
 <li>Settle the Liquidation Trade for the liquidator:
 <ol type="1">
 <li>Recalculate the Cost Basis.</li>

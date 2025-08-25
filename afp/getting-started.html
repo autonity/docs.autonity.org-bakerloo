@@ -110,7 +110,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../afp/about-afp.html">Autonity Futures Protocol</a></li><li class="breadcrumb-item"><a href="../afp/getting-started.html">Getting Started</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../afp/about-afp.html">Autonomous Futures Protocol</a></li><li class="breadcrumb-item"><a href="../afp/getting-started.html">Getting Started</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -133,7 +133,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
- <span class="menu-text">Autonity Futures Protocol</span></a>
+ <span class="menu-text">Autonomous Futures Protocol</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -437,7 +437,7 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#what-do-i-need-to-start-trading-through-the-browser" id="toc-what-do-i-need-to-start-trading-through-the-browser" class="nav-link active" data-scroll-target="#what-do-i-need-to-start-trading-through-the-browser">What do I need to start trading through the browser?</a></li>
-  <li><a href="#how-to-get-atn-and-usdc-on-autonity" id="toc-how-to-get-atn-and-usdc-on-autonity" class="nav-link" data-scroll-target="#how-to-get-atn-and-usdc-on-autonity">How to get ATN and USDC on Autonity</a></li>
+  <li><a href="#how-to-get-atn-and-usdc-on-autonity-mainnet" id="toc-how-to-get-atn-and-usdc-on-autonity-mainnet" class="nav-link" data-scroll-target="#how-to-get-atn-and-usdc-on-autonity-mainnet">How to get ATN and USDC on Autonity Mainnet</a></li>
   <li><a href="#how-to-create-and-fund-a-margin-account-on-the-afp" id="toc-how-to-create-and-fund-a-margin-account-on-the-afp" class="nav-link" data-scroll-target="#how-to-create-and-fund-a-margin-account-on-the-afp">How to create and fund a margin account on the AFP</a></li>
   <li><a href="#how-to-start-trading-products-on-the-afp" id="toc-how-to-start-trading-products-on-the-afp" class="nav-link" data-scroll-target="#how-to-start-trading-products-on-the-afp">How to start trading products on the AFP</a></li>
   </ul>
@@ -446,7 +446,7 @@ ul.task-list li input[type="checkbox"] {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../afp/about-afp.html">Autonity Futures Protocol</a></li><li class="breadcrumb-item"><a href="../afp/getting-started.html">Getting Started</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../afp/about-afp.html">Autonomous Futures Protocol</a></li><li class="breadcrumb-item"><a href="../afp/getting-started.html">Getting Started</a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title">Getting Started</h1>
 </div>
@@ -478,26 +478,27 @@ ul.task-list li input[type="checkbox"] {
 </ul></li>
 <li><strong>Collateral</strong>
 <ul>
-<li>There is no strict definition on what collateral a product can use but most will use USDC.</li>
-<li>Add the address of USDC on Autonity to your wallet so you can view your balance: <code>0x2777023E33B88CE622B15eCfA4ADa3cb5a9C545f</code></li>
+<li>It is up to the discretion of a Product Builder to decide which collateral a product will use but initially USDz will be supported.</li>
+<li>Add the address of USDz on Bakerloo to your wallet so you can view your balance: <code>0x7914e33423232885C1a3350c26bb420d23Ff31Bb</code>.</li>
 </ul></li>
 <li><strong>Auton (ATN)</strong>
 <ul>
 <li>ATN is used for paying gas fees on the Autonity network. When you make a transaction (e.g.&nbsp;to deposit your collateral) you will have to pay gas for that transaction to be included in the blockchain. Note that trading products on AutEx is gas-less.</li>
+<li>On Bakerloo, ATN can be acquired through the fauct: https://autonity.faucetme.pro/</li>
 </ul></li>
 </ol>
 </section>
-<section id="how-to-get-atn-and-usdc-on-autonity" class="level2">
-<h2 class="anchored" data-anchor-id="how-to-get-atn-and-usdc-on-autonity">How to get ATN and USDC on Autonity</h2>
+<section id="how-to-get-atn-and-usdc-on-autonity-mainnet" class="level2">
+<h2 class="anchored" data-anchor-id="how-to-get-atn-and-usdc-on-autonity-mainnet">How to get ATN and USDC on Autonity Mainnet</h2>
 <ol type="1">
-<li>You will need USDC on another blockchain (e.g.&nbsp;Polygon, Avalanche, Base, Optimism, Ethereum – see the full list <a href="https://chainlist.org/?search=usdc">here</a>) that you will then be able to bridge over to Autonity. To purchase USDC on one of these blockchains you can deposit funds to a centralised exchange and purchase it there with fiat before moving it to your EVM wallet.</li>
+<li>You will need USDC on another blockchain (e.g.&nbsp;Polygon, Avalanche, Base, Optimism, Ethereum – see the full list <a href="https://chainlist.org/?search=usdc">here</a>) that you will then be able to bridge over to Autonity. To purchase USDC on one of these blockchains you can deposit funds on a centralised exchange and purchase it there with fiat before moving it to your EVM wallet.</li>
 <li>Once you have USDC on another blockchain you can bridge your USDC over to Autonity via the bridge. Once you have successfully bridged your USDC, you will receive a small amount of ATN which you can use to make transactions with on Autonity.</li>
-<li>Use some of your USDC to purchase a minimal amount of additional ATN to ensure you don’t run out of gas on Autonity and strand your collateral. This can be done on a DEX such as ATN DAX.</li>
+<li>Use some of your USDC to purchase a minimal amount of additional ATN to ensure you don’t run out of gas and strand your collateral. This can be done on a DEX such as the DAX.</li>
 </ol>
 </section>
 <section id="how-to-create-and-fund-a-margin-account-on-the-afp" class="level2">
 <h2 class="anchored" data-anchor-id="how-to-create-and-fund-a-margin-account-on-the-afp">How to create and fund a margin account on the AFP</h2>
-<p>As highlighted in the <a href="../afp/architecture.html">Overall Architecture</a>, interaction with the AFP is not limited to a single front-end and collateral can be deposited by various methods (e.g.&nbsp;SDK, direct on-chain calls). However, for the ease of onboarding, the front-end of the first exchange built on the AFP, the AutEx, will be used to deposit collateral to a margin account.</p>
+<p>As highlighted in the <a href="../afp/architecture.html">Overall Architecture</a>, interaction with the AFP is not limited to a single front-end and collateral can be deposited by various methods (e.g.&nbsp;SDK, direct on-chain calls). However, for the ease of onboarding, the front-end of the first exchange built on the AFP, the AutEx, can also be used to deposit collateral to a margin account.</p>
 <ol type="1">
 <li>Visit <a href="https://proto-afp.pages.dev">https://proto-afp.pages.dev</a> and connect your EVM compatible wallet by clicking the “Connect Wallet” button.
 <ul>
@@ -506,7 +507,6 @@ ul.task-list li input[type="checkbox"] {
 </ul></li>
 <li>Deposit to the AFP by clicking the “Deposit” button next to your connected wallet address on AutEx.
 <ul>
-<li>The first deposit from a new address will create a new margin account automatically in the AFP. When depositing again, collateral will be credited to the previously created margin account.</li>
 <li>Enter the amount of USDC you would like to deposit to start trading and click “Deposit”.</li>
 <li>Confirm the transaction in your wallet extension.</li>
 </ul></li>
@@ -521,7 +521,7 @@ ul.task-list li input[type="checkbox"] {
 <li>Fill out the order form by entering the quantity you wish to trade and the price at which you want your order to be filled. Ensure your “Available Margin” is greater than the Initial Margin (IM) Required to place your desired order. You can go long (BUY) if you expect the price to go up or short (SELL) if you expect the price to go down.</li>
 <li>When submitting an order on AutEx you are required to sign it with your wallet. This is gas-less as it is providing cryptographic proof that you want your order to be filled with the parameters you have defined – not actually making an on-chain transaction.</li>
 <li>Once your order has been submitted, it can be viewed in the “Open Orders” tab until it is filled.</li>
-<li>Once it is filled you can track the PnL of your position under the “Positions” tab, and in the “Order History” you can see details related to your order execution, including the on-chain transaction that was sent to the clearing system on Autonity.</li>
+<li>Once it is filled you can track the PnL of your position under the “Positions” tab, and in the “Order History” you can see details related to your order execution, including the on-chain transaction that was sent to the clearing system on Autonity. The gas fees for the on-chain transaction were paid for by the trading protocol (e.g.&nbsp;AutEx).</li>
 </ol>
 
 

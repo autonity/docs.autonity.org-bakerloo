@@ -110,7 +110,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../afp/about-afp.html">Autonity Futures Protocol</a></li><li class="breadcrumb-item"><a href="../afp/products.html">Products</a></li><li class="breadcrumb-item"><a href="../afp/product-builders.html">Product Builders</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../afp/about-afp.html">Autonomous Futures Protocol</a></li><li class="breadcrumb-item"><a href="../afp/products.html">Products</a></li><li class="breadcrumb-item"><a href="../afp/product-builders.html">Product Builders</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -133,7 +133,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
- <span class="menu-text">Autonity Futures Protocol</span></a>
+ <span class="menu-text">Autonomous Futures Protocol</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -443,7 +443,7 @@ ul.task-list li input[type="checkbox"] {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../afp/about-afp.html">Autonity Futures Protocol</a></li><li class="breadcrumb-item"><a href="../afp/products.html">Products</a></li><li class="breadcrumb-item"><a href="../afp/product-builders.html">Product Builders</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../afp/about-afp.html">Autonomous Futures Protocol</a></li><li class="breadcrumb-item"><a href="../afp/products.html">Products</a></li><li class="breadcrumb-item"><a href="../afp/product-builders.html">Product Builders</a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title">Product Builders</h1>
 </div>
@@ -466,8 +466,8 @@ ul.task-list li input[type="checkbox"] {
 <h1></h1>
 <p>Product creation is permissionless in the AFP, meaning any address can deploy a product. Such an address is termed a <em>Product Builder.</em> Whilst this permissionless product creation gives everyone the opportunity to develop a successful, highly traded product, careful consideration must be given as to how individual Products are specified.</p>
 <p>Builders can create products by submitting a Product Specification to the Product Registry. Upon successful registration of a new product an event is emitted with the builder ID, and the newly registered product id.</p>
-<p>event ProductRegistered(address indexed builder, bytes32 productId)</p>
-<p>The Product Registry keeps track of globally unique Product IDs. The Product ID is a derived value from the Product Specification. It is equal to the hash of the concatenated builder and symbol, and must be globally unique, which means that the same builder cannot create two products with the same symbol.</p>
+<p><code>event ProductRegistered(address indexed builder, bytes32 productId)</code></p>
+<p>The Product Registry keeps track of globally unique Product IDs which is a derived value from the Product Specification. It is equal to the hash of the concatenated builder and symbol, and must be globally unique, which means that the same builder cannot create two products with the same symbol.</p>
 <p><code>ID[Ψ] = keccak256(builder, symbol)</code></p>
 
 

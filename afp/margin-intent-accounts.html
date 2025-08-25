@@ -110,7 +110,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../afp/about-afp.html">Autonity Futures Protocol</a></li><li class="breadcrumb-item"><a href="../afp/clearing-system.html">Clearing System</a></li><li class="breadcrumb-item"><a href="../afp/margin-intent-accounts.html">Margin &amp; Intent Accounts</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../afp/about-afp.html">Autonomous Futures Protocol</a></li><li class="breadcrumb-item"><a href="../afp/clearing-system.html">Clearing System</a></li><li class="breadcrumb-item"><a href="../afp/margin-intent-accounts.html">Margin &amp; Intent Accounts</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -133,7 +133,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
- <span class="menu-text">Autonity Futures Protocol</span></a>
+ <span class="menu-text">Autonomous Futures Protocol</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -447,7 +447,7 @@ ul.task-list li input[type="checkbox"] {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../afp/about-afp.html">Autonity Futures Protocol</a></li><li class="breadcrumb-item"><a href="../afp/clearing-system.html">Clearing System</a></li><li class="breadcrumb-item"><a href="../afp/margin-intent-accounts.html">Margin &amp; Intent Accounts</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../afp/about-afp.html">Autonomous Futures Protocol</a></li><li class="breadcrumb-item"><a href="../afp/clearing-system.html">Clearing System</a></li><li class="breadcrumb-item"><a href="../afp/margin-intent-accounts.html">Margin &amp; Intent Accounts</a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title">Margin &amp; Intent Accounts</h1>
 </div>
@@ -469,12 +469,13 @@ ul.task-list li input[type="checkbox"] {
 <section id="margin-accounts-mas" class="level2">
 <h2 class="anchored" data-anchor-id="margin-accounts-mas">Margin Accounts (MAs)</h2>
 <p>MAs are at the core of the AFP and are internal to the clearing system. They house the collateral that is required to open and maintain positions in products that a user trades.</p>
-<p>Any address on Autonity (termed the <em>Admin Address)</em> can create a Margin Account by depositing any ERC-20 collateral into the clearing system. If a Margin Account does not exist for an <em>Admin Address – Collateral Asset</em> pair, a new one is created automatically. If one already exists, it is funded with the deposited collateral.</p>
+<p>Any address on Autonity (termed the <em>Admin Address</em>) can create a Margin Account by depositing any ERC-20 collateral into the clearing system. If a Margin Account does not exist for an <em>Admin Address – Collateral Asset</em> pair, a new one is created automatically. If one already exists, it is funded with the deposited collateral.</p>
 <p>Collateral in a Margin Account is used to fund positions when trading products. By default, the Admin Address is also the designated Intent Account, allowing the admin address to trade the funds that it deposited and have administrative privileges over the Margin Account, such as:</p>
 <ul>
 <li>Depositing/withdrawing funds</li>
 <li>Adding/removing Intent Accounts</li>
 </ul>
+<p>An <em>Admin Address</em> can either be an EOA or a smart contract.</p>
 </section>
 <section id="margin-account-architecture" class="level2">
 <h2 class="anchored" data-anchor-id="margin-account-architecture">Margin Account Architecture</h2>
@@ -482,7 +483,7 @@ ul.task-list li input[type="checkbox"] {
 <p>There is one <a href="https://github.com/clearmatics/proto-afp/blob/master/clearing/contracts/MarginAccount.sol">MarginAccount.sol</a> contract per collateral asset which holds <em>all</em> the collateral deposited by Admin Addresses for that specific collateral asset. Individual MAs are then tracked within the Margin Account contract.</p>
 <p>Such <a href="https://github.com/clearmatics/proto-afp/blob/master/clearing/contracts/MarginAccount.sol">MarginAccount.sol</a> contracts are created by:</p>
 <p><code>function initializeMarginAccount(address collateralAsset) public returns (IMarginAccount)</code></p>
-<p>on the <a href="https://github.com/clearmatics/proto-afp/blob/master/clearing/contracts/MarginAccountRegistry.sol">MarginAccountRegistry.sol</a> contract. Anyone can call the above function but it is in the Product Builder’s interest to ensure that the collateral asset that they have specified for their product is ready for trading.</p>
+<p>on the <a href="https://github.com/clearmatics/proto-afp/blob/master/clearing/contracts/MarginAccountRegistry.sol">MarginAccountRegistry.sol</a> contract. Anyone can call the above function but it is in the Product Builder’s interest to ensure that the collateral asset that they have specified for their product is ready for trading (as it will cost extra gas to deploy a new MA contract).</p>
 </section>
 <section id="intent-accounts-ias" class="level2">
 <h2 class="anchored" data-anchor-id="intent-accounts-ias">Intent Accounts (IAs)</h2>
@@ -490,16 +491,14 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="analogy-to-a-hedge-fund" class="level2">
 <h2 class="anchored" data-anchor-id="analogy-to-a-hedge-fund">Analogy to a hedge fund</h2>
-<p>The setup described above can draw similarities to how a hedge fund may be structured - where the Admin Address may be considered to be the managing partner of the fund, and is able to raise capital, withdraw, hire/fire traders. Whereas IAs are the traders themselves who use the pool of capital of the fund to trade.</p>
-<p>In fact, this can be further extended due to there being no limitation on the Admin Address to be an EOA. If a smart contract is implemented instead that further breaks down potential roles, an architecture like below can be created:</p>
-<p><img src="images/hedge_fund_analogy.png" class="img-fluid"></p>
+<p>The setup described above is similar to how a hedge fund may be structured - where the Admin Address may be considered to be the managing partner of the fund, and is able to raise capital, withdraw funds, and hire/fire traders. Whereas IAs are the traders themselves who use the pool of capital of the fund to trade.</p>
 </section>
 <section id="margin-account-equity-mae-check" class="level2">
 <h2 class="anchored" data-anchor-id="margin-account-equity-mae-check">Margin Account Equity (MAE) Check</h2>
-<p>MAs serve the crucial purpose of housing collateral that is required to trade. As such, it is required to define a process by which the equity available in a Margin Account can be determined to:</p>
+<p>MAs serve the crucial purpose of housing collateral that is required to trade. As such, checking the equity available in a Margin Account for trading is crucial to determine if:</p>
 <ul>
-<li>See if the Margin Account is liquidatable.</li>
-<li>Ensure there is sufficient Initial Margin to satisfy the Initial Margin Requirements of a trade that is submitted for clearing.</li>
+<li>A Margin Account is liquidatable.</li>
+<li>A Margin Account has sufficient Initial Margin to satisfy the Initial Margin Requirements of a trade that is submitted for clearing.</li>
 </ul>
 <p><strong>Margin Account Equity</strong> is <strong>Capital</strong> plus <strong>Unrealized PnL</strong>:</p>
 <p><code>MAE = C + UPnL</code></p>
