@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>AFP SDK Reference – Autonity Documentation</title>
+<title>AFP Python SDK Reference – Autonity Documentation</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,41 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -110,7 +145,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../afp/afp-sdk-reference.html">For Developers</a></li><li class="breadcrumb-item"><a href="../afp/afp-sdk-reference.html">AFP SDK Reference</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../afp/afp-sdk-reference.html">For Developers</a></li><li class="breadcrumb-item"><a href="../afp/afp-sdk-reference.html">AFP Python SDK Reference</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -409,13 +444,19 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../afp/afp-sdk-reference.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">AFP SDK Reference</span></a>
+ <span class="menu-text">AFP Python SDK Reference</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../afp/afp-smart-contract-reference.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">AFP Smart Contract Reference</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../afp/afp-sdk-bindings-reference.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">AFP Smart Contract Python Bindings Reference</span></a>
   </div>
 </li>
       </ul>
@@ -430,16 +471,23 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#section" id="toc-section" class="nav-link active" data-scroll-target="#section"></a></li>
+  <li><a href="#afp" id="toc-afp" class="nav-link active" data-scroll-target="#afp">afp</a>
+  <ul class="collapse">
+  <li><a href="#afp.admin" id="toc-afp.admin" class="nav-link" data-scroll-target="#afp.admin">afp.Admin</a></li>
+  <li><a href="#afp.builder" id="toc-afp.builder" class="nav-link" data-scroll-target="#afp.builder">afp.Builder</a></li>
+  <li><a href="#afp.clearing" id="toc-afp.clearing" class="nav-link" data-scroll-target="#afp.clearing">afp.Clearing</a></li>
+  <li><a href="#afp.liquidation" id="toc-afp.liquidation" class="nav-link" data-scroll-target="#afp.liquidation">afp.Liquidation</a></li>
+  <li><a href="#afp.trading" id="toc-afp.trading" class="nav-link" data-scroll-target="#afp.trading">afp.Trading</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../afp/afp-sdk-reference.html">For Developers</a></li><li class="breadcrumb-item"><a href="../afp/afp-sdk-reference.html">AFP SDK Reference</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../afp/afp-sdk-reference.html">For Developers</a></li><li class="breadcrumb-item"><a href="../afp/afp-sdk-reference.html">AFP Python SDK Reference</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">AFP SDK Reference</h1>
+<h1 class="title">AFP Python SDK Reference</h1>
 </div>
 
 
@@ -456,11 +504,633 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="section" class="level1">
-<h1></h1>
-<p>Coming soon.</p>
+<section id="afp" class="level2">
+<h2 class="anchored" data-anchor-id="afp">afp</h2>
+<p>Autonity Futures Protocol Python SDK.</p>
+<p><strong>Classes:</strong></p>
+<ul>
+<li><a href="#afp.Admin"><strong>Admin</strong></a> – API for AutEx administration, restricted to AutEx admins.</li>
+<li><a href="#afp.Builder"><strong>Builder</strong></a> – API for building and submitting new products.</li>
+<li><a href="#afp.Clearing"><strong>Clearing</strong></a> – API for managing margin accounts.</li>
+<li><a href="#afp.Liquidation"><strong>Liquidation</strong></a> – API for participating in liquidation auctions.</li>
+<li><a href="#afp.Trading"><strong>Trading</strong></a> – API for trading in the AutEx exchange.</li>
+</ul>
+<section id="afp.admin" class="level3">
+<h3 class="anchored" data-anchor-id="afp.admin">afp.Admin</h3>
+<p>Bases: <code><a href="#afp.api.base.ExchangeAPI">ExchangeAPI</a></code></p>
+<p>API for AutEx administration, restricted to AutEx admins.</p>
+<p>Authenticates with the exchange on creation.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><strong>private_key</strong> (<code><a href="#str">str</a></code>) – The private key of the exchange adminstrator account.</li>
+</ul>
+<p><strong>Raises:</strong></p>
+<ul>
+<li><code><a href="#afp.exceptions.AuthenticationError">AuthenticationError</a></code> – If the exchange rejects the login attempt.</li>
+</ul>
+<p><strong>Functions:</strong></p>
+<ul>
+<li><a href="#afp.Admin.approve_product"><strong>approve_product</strong></a> – Approves a product for trading on the exchange.</li>
+<li><a href="#afp.Admin.delist_product"><strong>delist_product</strong></a> – Delists a product from the exchange.</li>
+</ul>
+<section id="afp.admin.approve_product" class="level4">
+<h4 class="anchored" data-anchor-id="afp.admin.approve_product">afp.Admin.approve_product</h4>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>approve_product(product_id)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Approves a product for trading on the exchange.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><strong>product_id</strong> (<code><a href="#str">str</a></code>) –</li>
+</ul>
+<p><strong>Raises:</strong></p>
+<ul>
+<li><code><a href="#afp.exceptions.AuthorizationError">AuthorizationError</a></code> – If the configured account is not an exchange administrator.</li>
+</ul>
+</section>
+<section id="afp.admin.delist_product" class="level4">
+<h4 class="anchored" data-anchor-id="afp.admin.delist_product">afp.Admin.delist_product</h4>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>delist_product(product_id)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Delists a product from the exchange.</p>
+<p>New order submissions of this product will be rejected.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><strong>product_id</strong> (<code><a href="#str">str</a></code>) –</li>
+</ul>
+<p><strong>Raises:</strong></p>
+<ul>
+<li><code><a href="#afp.exceptions.AuthorizationError">AuthorizationError</a></code> – If the configured account is not an exchange administrator.</li>
+</ul>
+</section>
+</section>
+<section id="afp.builder" class="level3">
+<h3 class="anchored" data-anchor-id="afp.builder">afp.Builder</h3>
+<p>Bases: <code><a href="#afp.api.base.ClearingSystemAPI">ClearingSystemAPI</a></code></p>
+<p>API for building and submitting new products.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><strong>private_key</strong> (<code><a href="#str">str</a></code>) – The private key of the blockchain account that submits the product.</li>
+<li><strong>autonity_rpc_url</strong> (<code><a href="#str">str</a></code>) – The URL of a JSON-RPC provider for Autonity. (HTTPS only.)</li>
+</ul>
+<p><strong>Functions:</strong></p>
+<ul>
+<li><a href="#afp.Builder.create_product"><strong>create_product</strong></a> – Creates a product specification with the given product data.</li>
+<li><a href="#afp.Builder.product_state"><strong>product_state</strong></a> – Returns the current state of a product.</li>
+<li><a href="#afp.Builder.register_product"><strong>register_product</strong></a> – Submits a product specification to the clearing system.</li>
+</ul>
+<section id="afp.builder.create_product" class="level4">
+<h4 class="anchored" data-anchor-id="afp.builder.create_product">afp.Builder.create_product</h4>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>create_product(<span class="op">*</span>, symbol, description, oracle_address, fsv_decimals, fsp_alpha, fsp_beta, fsv_calldata, start_time, earliest_fsp_submission_time, collateral_asset, tick_size, unit_value, initial_margin_requirement, maintenance_margin_requirement, offer_price_buffer, auction_bounty, tradeout_interval, extended_metadata)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Creates a product specification with the given product data.</p>
+<p>The builder account’s address is derived from the private key; the price quotation symbol is retrieved from the collateral asset.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><strong>symbol</strong> (<code><a href="#str">str</a></code>) –</li>
+<li><strong>description</strong> (<code><a href="#str">str</a></code>) –</li>
+<li><strong>oracle_address</strong> (<code><a href="#str">str</a></code>) –</li>
+<li><strong>fsv_decimals</strong> (<code><a href="#int">int</a></code>) –</li>
+<li><strong>fsp_alpha</strong> (<code><a href="#decimal.Decimal">Decimal</a></code>) –</li>
+<li><strong>fsp_beta</strong> (<code><a href="#int">int</a></code>) –</li>
+<li><strong>fsv_calldata</strong> (<code><a href="#str">str</a></code>) –</li>
+<li><strong>start_time</strong> (<code><a href="#datetime.datetime">datetime</a></code>) –</li>
+<li><strong>earliest_fsp_submission_time</strong> (<code><a href="#datetime.datetime">datetime</a></code>) –</li>
+<li><strong>collateral_asset</strong> (<code><a href="#str">str</a></code>) –</li>
+<li><strong>tick_size</strong> (<code><a href="#int">int</a></code>) –</li>
+<li><strong>unit_value</strong> (<code><a href="#decimal.Decimal">Decimal</a></code>) –</li>
+<li><strong>initial_margin_requirement</strong> (<code><a href="#decimal.Decimal">Decimal</a></code>) –</li>
+<li><strong>maintenance_margin_requirement</strong> (<code><a href="#decimal.Decimal">Decimal</a></code>) –</li>
+<li><strong>offer_price_buffer</strong> (<code><a href="#decimal.Decimal">Decimal</a></code>) –</li>
+<li><strong>auction_bounty</strong> (<code><a href="#decimal.Decimal">Decimal</a></code>) –</li>
+<li><strong>tradeout_interval</strong> (<code><a href="#int">int</a></code>) –</li>
+<li><strong>extended_metadata</strong> (<code><a href="#str">str</a></code>) –</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<ul>
+<li><code><a href="#afp.schemas.ProductSpecification">ProductSpecification</a></code> –</li>
+</ul>
+</section>
+<section id="afp.builder.product_state" class="level4">
+<h4 class="anchored" data-anchor-id="afp.builder.product_state">afp.Builder.product_state</h4>
+<div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>product_state(product_id)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Returns the current state of a product.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><strong>product_id</strong> (<code><a href="#str">str</a></code>) – The ID of the product.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<ul>
+<li><code><a href="#str">str</a></code> –</li>
+</ul>
+</section>
+<section id="afp.builder.register_product" class="level4">
+<h4 class="anchored" data-anchor-id="afp.builder.register_product">afp.Builder.register_product</h4>
+<div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>register_product(product)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Submits a product specification to the clearing system.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><strong>product</strong> (<code><a href="#afp.schemas.ProductSpecification">ProductSpecification</a></code>) –</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<ul>
+<li><code><a href="#str">str</a></code> – The hash of the transaction.</li>
+</ul>
+</section>
+</section>
+<section id="afp.clearing" class="level3">
+<h3 class="anchored" data-anchor-id="afp.clearing">afp.Clearing</h3>
+<p>Bases: <code><a href="#afp.api.base.ClearingSystemAPI">ClearingSystemAPI</a></code></p>
+<p>API for managing margin accounts.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><strong>private_key</strong> (<code><a href="#str">str</a></code>) – The private key of the blockchain account that manages the margin account.</li>
+<li><strong>autonity_rpc_url</strong> (<code><a href="#str">str</a></code>) – The URL of a JSON-RPC provider for Autonity. (HTTPS only.)</li>
+</ul>
+<p><strong>Functions:</strong></p>
+<ul>
+<li><a href="#afp.Clearing.authorize"><strong>authorize</strong></a> – Authorizes a blockchain account to submit intents to the clearing system</li>
+<li><a href="#afp.Clearing.capital"><strong>capital</strong></a> – Returns the amount of collateral tokens in the margin account associated</li>
+<li><a href="#afp.Clearing.collateral_asset"><strong>collateral_asset</strong></a> – Returns the collateral asset of a product.</li>
+<li><a href="#afp.Clearing.deposit_into_margin_account"><strong>deposit_into_margin_account</strong></a> – Deposits the specified amount of collateral tokens into the margin account</li>
+<li><a href="#afp.Clearing.initiate_final_settlement"><strong>initiate_final_settlement</strong></a> – Initiate final settlement (closeout) process for the specified accounts.</li>
+<li><a href="#afp.Clearing.maintenance_margin_available"><strong>maintenance_margin_available</strong></a> – Returns the maintenance margin available in the margin account associated</li>
+<li><a href="#afp.Clearing.maintenance_margin_used"><strong>maintenance_margin_used</strong></a> – Returns the maintenance margin used in the margin account associated with</li>
+<li><a href="#afp.Clearing.margin_account_equity"><strong>margin_account_equity</strong></a> – Returns the margin account equity in the margin account associated with the</li>
+<li><a href="#afp.Clearing.position"><strong>position</strong></a> – Returns the parameters of a position in the margin account associated with</li>
+<li><a href="#afp.Clearing.positions"><strong>positions</strong></a> – Returns all positions in the margin account associated with the collateral</li>
+<li><a href="#afp.Clearing.product_state"><strong>product_state</strong></a> – Returns the current state of a product.</li>
+<li><a href="#afp.Clearing.profit_and_loss"><strong>profit_and_loss</strong></a> – Returns the profit and loss in the margin account associated with the</li>
+<li><a href="#afp.Clearing.withdraw_from_margin_account"><strong>withdraw_from_margin_account</strong></a> – Withdraws the specified amount of collateral tokens from the margin account</li>
+<li><a href="#afp.Clearing.withdrawable_amount"><strong>withdrawable_amount</strong></a> – Returns the amount of collateral tokens withdrawable from the margin account</li>
+</ul>
+<section id="afp.clearing.authorize" class="level4">
+<h4 class="anchored" data-anchor-id="afp.clearing.authorize">afp.Clearing.authorize</h4>
+<div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>authorize(collateral_asset, intent_account_id)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Authorizes a blockchain account to submit intents to the clearing system using the margin account associated with the collateral asset.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><strong>collateral_asset</strong> (<code><a href="#str">str</a></code>) – The address of the collateral token.</li>
+<li><strong>intent_account_id</strong> (<code><a href="#str">str</a></code>) – The address of the intent account.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<ul>
+<li><code><a href="#str">str</a></code> – The hash of the transaction.</li>
+</ul>
+</section>
+<section id="afp.clearing.capital" class="level4">
+<h4 class="anchored" data-anchor-id="afp.clearing.capital">afp.Clearing.capital</h4>
+<div class="sourceCode" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>capital(collateral_asset)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Returns the amount of collateral tokens in the margin account associated with the collateral asset.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><strong>collateral_asset</strong> (<code><a href="#str">str</a></code>) – The address of the collateral token.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<ul>
+<li><code><a href="#decimal.Decimal">Decimal</a></code> –</li>
+</ul>
+</section>
+<section id="afp.clearing.collateral_asset" class="level4">
+<h4 class="anchored" data-anchor-id="afp.clearing.collateral_asset">afp.Clearing.collateral_asset</h4>
+<div class="sourceCode" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>collateral_asset(product_id)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Returns the collateral asset of a product.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><strong>product_id</strong> (<code><a href="#str">str</a></code>) – The ID of the product.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<ul>
+<li><code><a href="#str">str</a></code> –</li>
+</ul>
+</section>
+<section id="afp.clearing.deposit_into_margin_account" class="level4">
+<h4 class="anchored" data-anchor-id="afp.clearing.deposit_into_margin_account">afp.Clearing.deposit_into_margin_account</h4>
+<div class="sourceCode" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>deposit_into_margin_account(collateral_asset, amount)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Deposits the specified amount of collateral tokens into the margin account associated with the collateral asset.</p>
+<p>First approves the token transfer with the collateral token, then executes the transfer.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><strong>collateral_asset</strong> (<code><a href="#str">str</a></code>) – The address of the collateral token.</li>
+<li><strong>amount</strong> (<code><a href="#decimal.Decimal">Decimal</a></code>) – The amount of collateral tokens to deposit.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<ul>
+<li><code><a href="#str">str</a></code> – The hash of the approval transaction.</li>
+<li><code><a href="#str">str</a></code> – The hash of the deposit transaction.</li>
+</ul>
+</section>
+<section id="afp.clearing.initiate_final_settlement" class="level4">
+<h4 class="anchored" data-anchor-id="afp.clearing.initiate_final_settlement">afp.Clearing.initiate_final_settlement</h4>
+<div class="sourceCode" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>initiate_final_settlement(product_id, accounts)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Initiate final settlement (closeout) process for the specified accounts.</p>
+<p>The product must be in Final Settlement state. The accounts must hold non-zero positions in the product that offset each other (i.e.&nbsp;the sum of their position sizes is 0.)</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><strong>product_id</strong> (<code><a href="#str">str</a></code>) – The ID of the product.</li>
+<li><strong>accounts</strong> (<code>list of str</code>) – List of margin account IDs to initiate settlement for.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<ul>
+<li><code><a href="#str">str</a></code> – The hash of the transaction.</li>
+</ul>
+</section>
+<section id="afp.clearing.maintenance_margin_available" class="level4">
+<h4 class="anchored" data-anchor-id="afp.clearing.maintenance_margin_available">afp.Clearing.maintenance_margin_available</h4>
+<div class="sourceCode" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>maintenance_margin_available(collateral_asset)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Returns the maintenance margin available in the margin account associated with the collateral asset.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><strong>collateral_asset</strong> (<code><a href="#str">str</a></code>) – The address of the collateral token.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<ul>
+<li><code><a href="#decimal.Decimal">Decimal</a></code> –</li>
+</ul>
+</section>
+<section id="afp.clearing.maintenance_margin_used" class="level4">
+<h4 class="anchored" data-anchor-id="afp.clearing.maintenance_margin_used">afp.Clearing.maintenance_margin_used</h4>
+<div class="sourceCode" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>maintenance_margin_used(collateral_asset)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Returns the maintenance margin used in the margin account associated with the collateral asset.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><strong>collateral_asset</strong> (<code><a href="#str">str</a></code>) – The address of the collateral token.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<ul>
+<li><code><a href="#decimal.Decimal">Decimal</a></code> –</li>
+</ul>
+</section>
+<section id="afp.clearing.margin_account_equity" class="level4">
+<h4 class="anchored" data-anchor-id="afp.clearing.margin_account_equity">afp.Clearing.margin_account_equity</h4>
+<div class="sourceCode" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>margin_account_equity(collateral_asset)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Returns the margin account equity in the margin account associated with the collateral asset.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><strong>collateral_asset</strong> (<code><a href="#str">str</a></code>) – The address of the collateral token.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<ul>
+<li><code><a href="#decimal.Decimal">Decimal</a></code> –</li>
+</ul>
+</section>
+<section id="afp.clearing.position" class="level4">
+<h4 class="anchored" data-anchor-id="afp.clearing.position">afp.Clearing.position</h4>
+<div class="sourceCode" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>position(collateral_asset, position_id)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Returns the parameters of a position in the margin account associated with the collateral asset.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><strong>collateral_asset</strong> (<code><a href="#str">str</a></code>) – The address of the collateral token.</li>
+<li><strong>position_id</strong> (<code><a href="#str">str</a></code>) – The ID of the position.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<ul>
+<li><code><a href="#afp.schemas.Position">Position</a></code> –</li>
+</ul>
+</section>
+<section id="afp.clearing.positions" class="level4">
+<h4 class="anchored" data-anchor-id="afp.clearing.positions">afp.Clearing.positions</h4>
+<div class="sourceCode" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>positions(collateral_asset)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Returns all positions in the margin account associated with the collateral asset.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><strong>collateral_asset</strong> (<code><a href="#str">str</a></code>) – The address of the collateral token.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<ul>
+<li><code>list of afp.schemas.Position</code> –</li>
+</ul>
+</section>
+<section id="afp.clearing.product_state" class="level4">
+<h4 class="anchored" data-anchor-id="afp.clearing.product_state">afp.Clearing.product_state</h4>
+<div class="sourceCode" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>product_state(product_id)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Returns the current state of a product.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><strong>product_id</strong> (<code><a href="#str">str</a></code>) – The ID of the product.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<ul>
+<li><code><a href="#str">str</a></code> –</li>
+</ul>
+</section>
+<section id="afp.clearing.profit_and_loss" class="level4">
+<h4 class="anchored" data-anchor-id="afp.clearing.profit_and_loss">afp.Clearing.profit_and_loss</h4>
+<div class="sourceCode" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>profit_and_loss(collateral_asset)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Returns the profit and loss in the margin account associated with the collateral asset.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><strong>collateral_asset</strong> (<code><a href="#str">str</a></code>) – The address of the collateral token.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<ul>
+<li><code><a href="#decimal.Decimal">Decimal</a></code> –</li>
+</ul>
+</section>
+<section id="afp.clearing.withdraw_from_margin_account" class="level4">
+<h4 class="anchored" data-anchor-id="afp.clearing.withdraw_from_margin_account">afp.Clearing.withdraw_from_margin_account</h4>
+<div class="sourceCode" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>withdraw_from_margin_account(collateral_asset, amount)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Withdraws the specified amount of collateral tokens from the margin account associated with the collateral asset.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><strong>collateral_asset</strong> (<code><a href="#str">str</a></code>) – The address of the collateral token.</li>
+<li><strong>amount</strong> (<code><a href="#decimal.Decimal">Decimal</a></code>) – The amount of collateral tokens to withdraw.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<ul>
+<li><code><a href="#str">str</a></code> – The hash of the transaction.</li>
+</ul>
+</section>
+<section id="afp.clearing.withdrawable_amount" class="level4">
+<h4 class="anchored" data-anchor-id="afp.clearing.withdrawable_amount">afp.Clearing.withdrawable_amount</h4>
+<div class="sourceCode" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>withdrawable_amount(collateral_asset)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Returns the amount of collateral tokens withdrawable from the margin account associated with the collateral asset.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><strong>collateral_asset</strong> (<code><a href="#str">str</a></code>) – The address of the collateral token.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<ul>
+<li><code><a href="#decimal.Decimal">Decimal</a></code> –</li>
+</ul>
+</section>
+</section>
+<section id="afp.liquidation" class="level3">
+<h3 class="anchored" data-anchor-id="afp.liquidation">afp.Liquidation</h3>
+<p>Bases: <code><a href="#afp.api.base.ClearingSystemAPI">ClearingSystemAPI</a></code></p>
+<p>API for participating in liquidation auctions.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><strong>private_key</strong> (<code><a href="#str">str</a></code>) – The private key of the blockchain account that participates in a liquidation auction.</li>
+<li><strong>autonity_rpc_url</strong> (<code><a href="#str">str</a></code>) – The URL of a JSON-RPC provider for Autonity. (HTTPS only.)</li>
+</ul>
+<p><strong>Functions:</strong></p>
+<ul>
+<li><a href="#afp.Liquidation.auction_data"><strong>auction_data</strong></a> – Returns information on a liquidation auction.</li>
+<li><a href="#afp.Liquidation.create_bid"><strong>create_bid</strong></a> – Create a bid to be submitted to a liquidation auction.</li>
+<li><a href="#afp.Liquidation.request_liquidation"><strong>request_liquidation</strong></a> – Request a liquidation auction to be started.</li>
+<li><a href="#afp.Liquidation.submit_bids"><strong>submit_bids</strong></a> – Submit bids to a liquidation auction.</li>
+</ul>
+<section id="afp.liquidation.auction_data" class="level4">
+<h4 class="anchored" data-anchor-id="afp.liquidation.auction_data">afp.Liquidation.auction_data</h4>
+<div class="sourceCode" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>auction_data(margin_account_id, collateral_asset)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Returns information on a liquidation auction.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><strong>margin_account_id</strong> (<code><a href="#str">str</a></code>) – The ID of the margin account to be liquidated.</li>
+<li><strong>collateral_asset</strong> (<code><a href="#str">str</a></code>) – The address of the collateral token that the margin account is trading with.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<ul>
+<li><code><a href="#str">str</a></code> – The hash of the transaction.</li>
+</ul>
+</section>
+<section id="afp.liquidation.create_bid" class="level4">
+<h4 class="anchored" data-anchor-id="afp.liquidation.create_bid">afp.Liquidation.create_bid</h4>
+<div class="sourceCode" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>create_bid(product_id, price, quantity, side)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Create a bid to be submitted to a liquidation auction.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><strong>product_id</strong> (<code><a href="#str">str</a></code>) –</li>
+<li><strong>price</strong> (<code><a href="#decimal.Decimal">Decimal</a></code>) –</li>
+<li><strong>quantity</strong> (<code><a href="#int">int</a></code>) –</li>
+<li><strong>side</strong> (<code><a href="#str">str</a></code>) –</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<ul>
+<li><code><a href="#afp.schemas.Bid">Bid</a></code> –</li>
+</ul>
+</section>
+<section id="afp.liquidation.request_liquidation" class="level4">
+<h4 class="anchored" data-anchor-id="afp.liquidation.request_liquidation">afp.Liquidation.request_liquidation</h4>
+<div class="sourceCode" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>request_liquidation(margin_account_id, collateral_asset)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Request a liquidation auction to be started.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><strong>margin_account_id</strong> (<code><a href="#str">str</a></code>) – The ID of the margin account to be liquidated.</li>
+<li><strong>collateral_asset</strong> (<code><a href="#str">str</a></code>) – The address of the collateral token that the margin account is trading with.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<ul>
+<li><code><a href="#str">str</a></code> – The hash of the transaction.</li>
+</ul>
+</section>
+<section id="afp.liquidation.submit_bids" class="level4">
+<h4 class="anchored" data-anchor-id="afp.liquidation.submit_bids">afp.Liquidation.submit_bids</h4>
+<div class="sourceCode" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>submit_bids(margin_account_id, collateral_asset, bids)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Submit bids to a liquidation auction.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><strong>margin_account_id</strong> (<code><a href="#str">str</a></code>) – The ID of the margin account that is being liquidated.</li>
+<li><strong>collateral_asset</strong> (<code><a href="#str">str</a></code>) – The address of the collateral token that the margin account is trading with.</li>
+<li><strong>bids</strong> (<code><a href="#typing.Iterable">Iterable</a>[<a href="#afp.schemas.Bid">Bid</a>]</code>) –</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<ul>
+<li><code><a href="#str">str</a></code> – The hash of the transaction.</li>
+</ul>
+</section>
+</section>
+<section id="afp.trading" class="level3">
+<h3 class="anchored" data-anchor-id="afp.trading">afp.Trading</h3>
+<p>Bases: <code><a href="#afp.api.base.ExchangeAPI">ExchangeAPI</a></code></p>
+<p>API for trading in the AutEx exchange.</p>
+<p>Authenticates with the exchange on creation.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><strong>private_key</strong> (<code><a href="#str">str</a></code>) – The private key of the account that submits intents to the exchange.</li>
+</ul>
+<p><strong>Raises:</strong></p>
+<ul>
+<li><code><a href="#afp.exceptions.AuthenticationError">AuthenticationError</a></code> – If the exchange rejects the login attempt.</li>
+</ul>
+<p><strong>Functions:</strong></p>
+<ul>
+<li><a href="#afp.Trading.create_intent"><strong>create_intent</strong></a> – Creates an intent with the given intent data, generates its hash and signs it</li>
+<li><a href="#afp.Trading.iter_market_depth"><strong>iter_market_depth</strong></a> – Subscribes to updates of the depth of market for the given product.</li>
+<li><a href="#afp.Trading.iter_order_fills"><strong>iter_order_fills</strong></a> – Subscribes to the authenticated account’s new order fills that match the</li>
+<li><a href="#afp.Trading.market_depth"><strong>market_depth</strong></a> – Retrieves the depth of market for the given product.</li>
+<li><a href="#afp.Trading.open_orders"><strong>open_orders</strong></a> – Retrieves all open and partially filled limit orders that have been submitted</li>
+<li><a href="#afp.Trading.order"><strong>order</strong></a> – Retrieves an order by its ID from the orders that have been submitted by the</li>
+<li><a href="#afp.Trading.order_fills"><strong>order_fills</strong></a> – Retrieves the authenticated account’s order fills that match the given</li>
+<li><a href="#afp.Trading.product"><strong>product</strong></a> – Retrieves a product for trading by its ID.</li>
+<li><a href="#afp.Trading.products"><strong>products</strong></a> – Retrieves the products approved for trading on the exchange.</li>
+<li><a href="#afp.Trading.submit_cancel_order"><strong>submit_cancel_order</strong></a> – Sends a cancellation order to the exchange.</li>
+<li><a href="#afp.Trading.submit_limit_order"><strong>submit_limit_order</strong></a> – Sends an intent expressing a limit order to the exchange.</li>
+</ul>
+<section id="afp.trading.create_intent" class="level4">
+<h4 class="anchored" data-anchor-id="afp.trading.create_intent">afp.Trading.create_intent</h4>
+<div class="sourceCode" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>create_intent(<span class="op">*</span>, product, side, limit_price, quantity, max_trading_fee_rate, good_until_time, margin_account_id<span class="op">=</span><span class="va">None</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Creates an intent with the given intent data, generates its hash and signs it with the configured account’s private key.</p>
+<p>The intent account’s address is derived from the private key. The intent account is assumed to be the same as the margin account if the margin account ID is not specified.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><strong>product</strong> (<code><a href="#afp.schemas.ExchangeProduct">ExchangeProduct</a></code>) –</li>
+<li><strong>side</strong> (<code><a href="#str">str</a></code>) –</li>
+<li><strong>limit_price</strong> (<code><a href="#decimal.Decimal">Decimal</a></code>) –</li>
+<li><strong>quantity</strong> (<code><a href="#decimal.Decimal">Decimal</a></code>) –</li>
+<li><strong>max_trading_fee_rate</strong> (<code><a href="#decimal.Decimal">Decimal</a></code>) –</li>
+<li><strong>good_until_time</strong> (<code><a href="#datetime.datetime.datetime">datetime</a></code>) –</li>
+<li><strong>margin_account_id</strong> (<code><a href="#str">str</a></code>) –</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<ul>
+<li><code><a href="#afp.schemas.Intent">Intent</a></code> –</li>
+</ul>
+</section>
+<section id="afp.trading.iter_market_depth" class="level4">
+<h4 class="anchored" data-anchor-id="afp.trading.iter_market_depth">afp.Trading.iter_market_depth</h4>
+<div class="sourceCode" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>iter_market_depth(product_id)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Subscribes to updates of the depth of market for the given product.</p>
+<p>Returns a generator that yields the updated market depth data as it is published by the exhange.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><strong>product_id</strong> (<code><a href="#str">str</a></code>) –</li>
+</ul>
+<p><strong>Yields:</strong></p>
+<ul>
+<li><code><a href="#afp.schemas.MarketDepthData">MarketDepthData</a></code> –</li>
+</ul>
+<p><strong>Raises:</strong></p>
+<ul>
+<li><code><a href="#afp.exceptions.NotFoundError">NotFoundError</a></code> – If no such product exists.</li>
+</ul>
+</section>
+<section id="afp.trading.iter_order_fills" class="level4">
+<h4 class="anchored" data-anchor-id="afp.trading.iter_order_fills">afp.Trading.iter_order_fills</h4>
+<div class="sourceCode" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>iter_order_fills(<span class="op">*</span>, product_id<span class="op">=</span><span class="va">None</span>, margin_account_id<span class="op">=</span><span class="va">None</span>, intent_hash<span class="op">=</span><span class="va">None</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Subscribes to the authenticated account’s new order fills that match the given parameters.</p>
+<p>Returns a generator that yields new order fills as they are published by the exchange. A new order fill gets publised as soon as there is a match in the order book, before the trade is submitted to clearing.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><strong>product_id</strong> (<code><a href="#str">str</a></code>) –</li>
+<li><strong>margin_account_id</strong> (<code><a href="#str">str</a></code>) –</li>
+<li><strong>intent_hash</strong> (<code><a href="#str">str</a></code>) –</li>
+</ul>
+<p><strong>Yields:</strong></p>
+<ul>
+<li><code><a href="#afp.schemas.OrderFill">OrderFill</a></code> –</li>
+</ul>
+</section>
+<section id="afp.trading.market_depth" class="level4">
+<h4 class="anchored" data-anchor-id="afp.trading.market_depth">afp.Trading.market_depth</h4>
+<div class="sourceCode" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>market_depth(product_id)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Retrieves the depth of market for the given product.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><strong>product_id</strong> (<code><a href="#str">str</a></code>) –</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<ul>
+<li><code><a href="#afp.schemas.MarketDepthData">MarketDepthData</a></code> –</li>
+</ul>
+<p><strong>Raises:</strong></p>
+<ul>
+<li><code><a href="#afp.exceptions.NotFoundError">NotFoundError</a></code> – If no such product exists.</li>
+</ul>
+</section>
+<section id="afp.trading.open_orders" class="level4">
+<h4 class="anchored" data-anchor-id="afp.trading.open_orders">afp.Trading.open_orders</h4>
+<div class="sourceCode" id="cb28"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>open_orders()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Retrieves all open and partially filled limit orders that have been submitted by the authenticated account.</p>
+<p><strong>Returns:</strong></p>
+<ul>
+<li><code>list of afp.schemas.Order</code> –</li>
+</ul>
+</section>
+<section id="afp.trading.order" class="level4">
+<h4 class="anchored" data-anchor-id="afp.trading.order">afp.Trading.order</h4>
+<div class="sourceCode" id="cb29"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>order(order_id)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Retrieves an order by its ID from the orders that have been submitted by the authenticated account.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><strong>order_id</strong> (<code><a href="#str">str</a></code>) –</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<ul>
+<li><code><a href="#afp.schemas.Order">Order</a></code> –</li>
+</ul>
+<p><strong>Raises:</strong></p>
+<ul>
+<li><code><a href="#afp.exceptions.NotFoundError">NotFoundError</a></code> – If no such order exists.</li>
+</ul>
+</section>
+<section id="afp.trading.order_fills" class="level4">
+<h4 class="anchored" data-anchor-id="afp.trading.order_fills">afp.Trading.order_fills</h4>
+<div class="sourceCode" id="cb30"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>order_fills(<span class="op">*</span>, product_id<span class="op">=</span><span class="va">None</span>, margin_account_id<span class="op">=</span><span class="va">None</span>, intent_hash<span class="op">=</span><span class="va">None</span>, start<span class="op">=</span><span class="va">None</span>, end<span class="op">=</span><span class="va">None</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Retrieves the authenticated account’s order fills that match the given parameters.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><strong>product_id</strong> (<code><a href="#str">str</a></code>) –</li>
+<li><strong>margin_account_id</strong> (<code><a href="#str">str</a></code>) –</li>
+<li><strong>intent_hash</strong> (<code><a href="#str">str</a></code>) –</li>
+<li><strong>start</strong> (<code><a href="#datetime.datetime.datetime">datetime</a></code>) –</li>
+<li><strong>end</strong> (<code><a href="#datetime.datetime.datetime">datetime</a></code>) –</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<ul>
+<li><code>list of afp.schemas.OrderFill</code> –</li>
+</ul>
+</section>
+<section id="afp.trading.product" class="level4">
+<h4 class="anchored" data-anchor-id="afp.trading.product">afp.Trading.product</h4>
+<div class="sourceCode" id="cb31"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>product(product_id)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Retrieves a product for trading by its ID.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><strong>product_id</strong> (<code><a href="#str">str</a></code>) –</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<ul>
+<li><code><a href="#afp.schemas.ExchangeProduct">ExchangeProduct</a></code> –</li>
+</ul>
+<p><strong>Raises:</strong></p>
+<ul>
+<li><code><a href="#afp.exceptions.NotFoundError">NotFoundError</a></code> – If no such product exists.</li>
+</ul>
+</section>
+<section id="afp.trading.products" class="level4">
+<h4 class="anchored" data-anchor-id="afp.trading.products">afp.Trading.products</h4>
+<div class="sourceCode" id="cb32"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>products()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Retrieves the products approved for trading on the exchange.</p>
+<p><strong>Returns:</strong></p>
+<ul>
+<li><code>list of afp.schemas.ExchangeProduct</code> –</li>
+</ul>
+</section>
+<section id="afp.trading.submit_cancel_order" class="level4">
+<h4 class="anchored" data-anchor-id="afp.trading.submit_cancel_order">afp.Trading.submit_cancel_order</h4>
+<div class="sourceCode" id="cb33"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>submit_cancel_order(intent_hash)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Sends a cancellation order to the exchange.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><strong>intent_hash</strong> (<code><a href="#str">str</a></code>) –</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<ul>
+<li><code><a href="#afp.schemas.Order">Order</a></code> –</li>
+</ul>
+<p><strong>Raises:</strong></p>
+<ul>
+<li><code><a href="#afp.exceptions.ValidationError">ValidationError</a></code> – If the exchange rejects the cancellation.</li>
+</ul>
+</section>
+<section id="afp.trading.submit_limit_order" class="level4">
+<h4 class="anchored" data-anchor-id="afp.trading.submit_limit_order">afp.Trading.submit_limit_order</h4>
+<div class="sourceCode" id="cb34"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a>submit_limit_order(intent)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Sends an intent expressing a limit order to the exchange.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><strong>intent</strong> (<code><a href="#afp.schemas.Intent">Intent</a></code>) –</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<ul>
+<li><code><a href="#afp.schemas.Order">Order</a></code> –</li>
+</ul>
+<p><strong>Raises:</strong></p>
+<ul>
+<li><code><a href="#afp.exceptions.ValidationError">ValidationError</a></code> – If the exchange rejects the intent.</li>
+</ul>
 
 
+</section>
+</section>
 </section>
 
 </main> <!-- /main -->
