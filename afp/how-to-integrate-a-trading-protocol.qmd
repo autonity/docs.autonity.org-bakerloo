@@ -22,8 +22,7 @@ Before you can implement a trading protocol, ensure you have:
 ```
 ## SDK
 ```python
-def greet(name):
-    print(f"Hello, {name}!")
+TBA
 ```
 :::
 
@@ -37,8 +36,7 @@ def greet(name):
 ```
 ## SDK
 ```python
-def greet(name):
-    print(f"Hello, {name}!")
+TBA
 ```
 :::
 
@@ -53,8 +51,7 @@ function execute(IClearing.Trade calldata trade, bool fallbackOnFailure) externa
 ```
 ## SDK
 ```python
-def greet(name):
-    print(f"Hello, {name}!")
+TBA
 ```
 :::
 

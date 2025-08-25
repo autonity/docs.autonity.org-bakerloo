@@ -6,7 +6,7 @@ Product creation is permissionless on the AFP, so any address on Autonity can be
 
 ### Prerequisites
 
-Before you can create a product on the Autonity Futures Protocol (AFP), ensure you have:
+Before you can create a product on the Autonomous Futures Protocol (AFP), ensure you have:
 
 - **A Margin Account contract exists in the collateral of your product.** For your product to be easily tradeable you will want to ensure that the Margin Contract for the collateral asset that you wish to use for your product has been deployed. This can be done by calling:
   
@@ -40,8 +40,7 @@ Before you can create a product on the Autonity Futures Protocol (AFP), ensure y
 ```
 ## SDK
 ```python
-def greet(name):
-    print(f"Hello, {name}!")
+TBA
 ```
 :::
 

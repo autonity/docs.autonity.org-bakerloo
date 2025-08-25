@@ -4,7 +4,7 @@ title: "AFP Python SDK Reference"
 
 ## afp
 
-Autonity Futures Protocol Python SDK.
+Autonomous Futures Protocol Python SDK.
 
 **Classes:**
 

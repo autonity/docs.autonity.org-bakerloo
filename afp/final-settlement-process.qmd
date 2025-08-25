@@ -16,8 +16,7 @@ function initiateFinalSettlement(bytes32 productID, address[] calldata accounts)
 ```
 ## SDK
 ```python
-def greet(name):
-    print(f"Hello, {name}!")
+TBA
 ```
 :::
 

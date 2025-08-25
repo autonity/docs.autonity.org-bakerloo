@@ -38,12 +38,10 @@ Once a liquidation auction has begun, auction bids can be processed. When the li
 
 `function bidAuction(address marginAccountID, address collateralToken, BidData[] calldata bids) external notSelf(marginAccountID)`
 
-See <reference to natspec documentation of the function> for more details.
-
 Process:
 
 1. Perform a [Liquidation Auction Bid Validation Check](#liquidation-auction-bid-validation) on the Liquidation Auction Bid. If it fails, the process fails.
-2. Run an [MAE Check](/margin-intent-accounts.qmd#margin-account-equity-mae-check) on the liquidator’s Margin Account for the corresponding Collateral Asset and the specified products and prices. In case of failure, the bid is rejected.
+2. Run an [MAE Check](/afp/margin-intent-accounts.qmd#margin-account-equity-mae-check) on the liquidator’s Margin Account for the corresponding Collateral Asset and the specified products and prices. In case of failure, the bid is rejected.
 3. Settle the Liquidation Trade for the liquidator:
     1. Recalculate the Cost Basis.
     2. Recalculate the Position Size.

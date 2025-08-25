@@ -30,8 +30,7 @@ The state of a product can always be queried by:
 ```
 ## SDK
 ```python
-def greet(name):
-    print(f"Hello, {name}!")
+TBA
 ```
 :::
 

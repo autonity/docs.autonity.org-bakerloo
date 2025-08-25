@@ -4,7 +4,7 @@ title: "AFP Smart Contract Python Bindings Reference"
 
 ## afp.bindings
 
-Typed bindings around the smart contracts of the Autonity Futures Protocol.
+Typed bindings around the smart contracts of the Autonomous Futures Protocol.
 
 **Classes:**
 

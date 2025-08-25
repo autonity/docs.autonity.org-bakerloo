@@ -6,9 +6,9 @@ Product creation is permissionless in the AFP, meaning any address can deploy a 
 
 Builders can create products by submitting a Product Specification to the Product Registry. Upon successful registration of a new product an event is emitted with the builder ID, and the newly registered product id.
 
-event ProductRegistered(address indexed builder, bytes32 productId)
+`event ProductRegistered(address indexed builder, bytes32 productId)`
 
-The Product Registry keeps track of globally unique Product IDs. The Product ID is a derived value from the Product Specification. It is equal to the hash of the concatenated builder and symbol, and must be globally unique, which means that the same builder cannot create two products with the same symbol.
+The Product Registry keeps track of globally unique Product IDs which is a derived value from the Product Specification. It is equal to the hash of the concatenated builder and symbol, and must be globally unique, which means that the same builder cannot create two products with the same symbol.
 
 `ID[Ψ] = keccak256(builder, symbol)`
 

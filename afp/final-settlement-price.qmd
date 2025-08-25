@@ -20,8 +20,7 @@ The FSV can be fetched at any point after `Earliest FSP Resolution Time` has bee
 ```
 ## SDK
 ```python
-def greet(name):
-    print(f"Hello, {name}!")
+TBA
 ```
 :::
 

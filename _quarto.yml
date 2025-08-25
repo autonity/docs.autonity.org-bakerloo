@@ -19,7 +19,7 @@ website:
     style: "docked"
     search: true
     contents:
-      - section: "Autonity Futures Protocol"
+      - section: "Autonomous Futures Protocol"
         contents:
           - text: About the AFP
             file: afp/about-afp.qmd
