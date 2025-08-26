@@ -2,182 +2,182 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://autonity.github.io/docs.autonity.org-bakerloo/index.html</loc>
-    <lastmod>2025-08-26T07:29:43.182Z</lastmod>
+    <lastmod>2025-08-26T07:50:51.339Z</lastmod>
   </url>
   <url>
     <loc>https://autonity.github.io/docs.autonity.org-bakerloo/afp/bankruptcy.html</loc>
-    <lastmod>2025-08-26T07:29:43.177Z</lastmod>
+    <lastmod>2025-08-26T07:50:51.335Z</lastmod>
   </url>
   <url>
     <loc>https://autonity.github.io/docs.autonity.org-bakerloo/afp/product-specification.html</loc>
-    <lastmod>2025-08-26T07:29:43.180Z</lastmod>
+    <lastmod>2025-08-26T07:50:51.337Z</lastmod>
   </url>
   <url>
     <loc>https://autonity.github.io/docs.autonity.org-bakerloo/afp/getting-started.html</loc>
-    <lastmod>2025-08-26T07:29:43.178Z</lastmod>
+    <lastmod>2025-08-26T07:50:51.336Z</lastmod>
   </url>
   <url>
     <loc>https://autonity.github.io/docs.autonity.org-bakerloo/afp/liquidation.html</loc>
-    <lastmod>2025-08-26T07:29:43.179Z</lastmod>
+    <lastmod>2025-08-26T07:50:51.336Z</lastmod>
   </url>
   <url>
     <loc>https://autonity.github.io/docs.autonity.org-bakerloo/afp/clearing-fees.html</loc>
-    <lastmod>2025-08-26T07:29:43.178Z</lastmod>
+    <lastmod>2025-08-26T07:50:51.335Z</lastmod>
   </url>
   <url>
     <loc>https://autonity.github.io/docs.autonity.org-bakerloo/afp/afp-smart-contract-reference.html</loc>
-    <lastmod>2025-08-26T07:29:43.177Z</lastmod>
+    <lastmod>2025-08-26T07:50:51.335Z</lastmod>
   </url>
   <url>
     <loc>https://autonity.github.io/docs.autonity.org-bakerloo/afp/final-settlement-price.html</loc>
-    <lastmod>2025-08-26T07:29:43.178Z</lastmod>
+    <lastmod>2025-08-26T07:50:51.335Z</lastmod>
   </url>
   <url>
     <loc>https://autonity.github.io/docs.autonity.org-bakerloo/afp/afp-sdk-reference.html</loc>
-    <lastmod>2025-08-26T07:29:43.177Z</lastmod>
+    <lastmod>2025-08-26T07:50:51.334Z</lastmod>
   </url>
   <url>
     <loc>https://autonity.github.io/docs.autonity.org-bakerloo/afp/margining.html</loc>
-    <lastmod>2025-08-26T07:29:43.179Z</lastmod>
+    <lastmod>2025-08-26T07:50:51.336Z</lastmod>
   </url>
   <url>
     <loc>https://autonity.github.io/docs.autonity.org-bakerloo/afp/how-to-integrate-an-oracle.html</loc>
-    <lastmod>2025-08-26T07:29:43.179Z</lastmod>
+    <lastmod>2025-08-26T07:50:51.336Z</lastmod>
   </url>
   <url>
     <loc>https://autonity.github.io/docs.autonity.org-bakerloo/afp/liquidation-agent.html</loc>
-    <lastmod>2025-08-26T07:29:43.179Z</lastmod>
+    <lastmod>2025-08-26T07:50:51.336Z</lastmod>
   </url>
   <url>
     <loc>https://autonity.github.io/docs.autonity.org-bakerloo/afp/cross-venue-cross-margining.html</loc>
-    <lastmod>2025-08-26T07:29:43.178Z</lastmod>
+    <lastmod>2025-08-26T07:50:51.335Z</lastmod>
   </url>
   <url>
     <loc>https://autonity.github.io/docs.autonity.org-bakerloo/afp/intents.html</loc>
-    <lastmod>2025-08-26T07:29:43.179Z</lastmod>
+    <lastmod>2025-08-26T07:50:51.336Z</lastmod>
   </url>
   <url>
     <loc>https://autonity.github.io/docs.autonity.org-bakerloo/afp/final-settlement-price-agent.html</loc>
-    <lastmod>2025-08-26T07:29:43.178Z</lastmod>
+    <lastmod>2025-08-26T07:50:51.335Z</lastmod>
   </url>
   <url>
     <loc>https://autonity.github.io/docs.autonity.org-bakerloo/afp/oracle-interface.html</loc>
-    <lastmod>2025-08-26T07:29:43.179Z</lastmod>
+    <lastmod>2025-08-26T07:50:51.336Z</lastmod>
   </url>
   <url>
     <loc>https://autonity.github.io/docs.autonity.org-bakerloo/afp/architecture.html</loc>
-    <lastmod>2025-08-26T07:29:43.177Z</lastmod>
-  </url>
-  <url>
-    <loc>https://autonity.github.io/docs.autonity.org-bakerloo/afp/how-to-create-a-product.html</loc>
-    <lastmod>2025-08-26T07:29:43.178Z</lastmod>
-  </url>
-  <url>
-    <loc>https://autonity.github.io/docs.autonity.org-bakerloo/afp/the-roles-of-trading-protocols.html</loc>
-    <lastmod>2025-08-26T07:29:43.180Z</lastmod>
-  </url>
-  <url>
-    <loc>https://autonity.github.io/docs.autonity.org-bakerloo/afp/closeout-agent.html</loc>
-    <lastmod>2025-08-26T07:29:43.178Z</lastmod>
-  </url>
-  <url>
-    <loc>https://autonity.github.io/docs.autonity.org-bakerloo/afp/product-lifecycle.html</loc>
-    <lastmod>2025-08-26T07:29:43.179Z</lastmod>
-  </url>
-  <url>
-    <loc>https://autonity.github.io/docs.autonity.org-bakerloo/afp/glossary.html</loc>
-    <lastmod>2025-08-26T07:29:43.178Z</lastmod>
-  </url>
-  <url>
-    <loc>https://autonity.github.io/docs.autonity.org-bakerloo/afp/final-settlement-process.html</loc>
-    <lastmod>2025-08-26T07:29:43.178Z</lastmod>
-  </url>
-  <url>
-    <loc>https://autonity.github.io/docs.autonity.org-bakerloo/layer1/index.html</loc>
-    <lastmod>2025-08-26T07:29:43.182Z</lastmod>
-  </url>
-  <url>
-    <loc>https://autonity.github.io/docs.autonity.org-bakerloo/afp/trading-fees.html</loc>
-    <lastmod>2025-08-26T07:29:43.180Z</lastmod>
-  </url>
-  <url>
-    <loc>https://autonity.github.io/docs.autonity.org-bakerloo/afp/afp-sdk-bindings-reference.html</loc>
-    <lastmod>2025-08-26T07:29:43.177Z</lastmod>
-  </url>
-  <url>
-    <loc>https://autonity.github.io/docs.autonity.org-bakerloo/afp/fallback-mechanism.html</loc>
-    <lastmod>2025-08-26T07:29:43.178Z</lastmod>
-  </url>
-  <url>
-    <loc>https://autonity.github.io/docs.autonity.org-bakerloo/afp/products.html</loc>
-    <lastmod>2025-08-26T07:29:43.180Z</lastmod>
-  </url>
-  <url>
-    <loc>https://autonity.github.io/docs.autonity.org-bakerloo/afp/afp-sdk-overview.html</loc>
-    <lastmod>2025-08-26T07:29:43.177Z</lastmod>
+    <lastmod>2025-08-26T07:50:51.335Z</lastmod>
   </url>
   <url>
     <loc>https://autonity.github.io/docs.autonity.org-bakerloo/afp/about-afp.html</loc>
-    <lastmod>2025-08-26T07:29:43.177Z</lastmod>
+    <lastmod>2025-08-26T07:50:51.334Z</lastmod>
+  </url>
+  <url>
+    <loc>https://autonity.github.io/docs.autonity.org-bakerloo/afp/afp-sdk-overview.html</loc>
+    <lastmod>2025-08-26T07:50:51.334Z</lastmod>
+  </url>
+  <url>
+    <loc>https://autonity.github.io/docs.autonity.org-bakerloo/afp/products.html</loc>
+    <lastmod>2025-08-26T07:50:51.337Z</lastmod>
+  </url>
+  <url>
+    <loc>https://autonity.github.io/docs.autonity.org-bakerloo/afp/fallback-mechanism.html</loc>
+    <lastmod>2025-08-26T07:50:51.335Z</lastmod>
+  </url>
+  <url>
+    <loc>https://autonity.github.io/docs.autonity.org-bakerloo/afp/glossary.html</loc>
+    <lastmod>2025-08-26T07:50:51.336Z</lastmod>
+  </url>
+  <url>
+    <loc>https://autonity.github.io/docs.autonity.org-bakerloo/afp/final-settlement-process.html</loc>
+    <lastmod>2025-08-26T07:50:51.335Z</lastmod>
+  </url>
+  <url>
+    <loc>https://autonity.github.io/docs.autonity.org-bakerloo/layer1/index.html</loc>
+    <lastmod>2025-08-26T07:50:51.339Z</lastmod>
+  </url>
+  <url>
+    <loc>https://autonity.github.io/docs.autonity.org-bakerloo/afp/trading-fees.html</loc>
+    <lastmod>2025-08-26T07:50:51.337Z</lastmod>
+  </url>
+  <url>
+    <loc>https://autonity.github.io/docs.autonity.org-bakerloo/afp/product-lifecycle.html</loc>
+    <lastmod>2025-08-26T07:50:51.337Z</lastmod>
+  </url>
+  <url>
+    <loc>https://autonity.github.io/docs.autonity.org-bakerloo/afp/closeout-agent.html</loc>
+    <lastmod>2025-08-26T07:50:51.335Z</lastmod>
+  </url>
+  <url>
+    <loc>https://autonity.github.io/docs.autonity.org-bakerloo/afp/the-roles-of-trading-protocols.html</loc>
+    <lastmod>2025-08-26T07:50:51.337Z</lastmod>
+  </url>
+  <url>
+    <loc>https://autonity.github.io/docs.autonity.org-bakerloo/afp/how-to-create-a-product.html</loc>
+    <lastmod>2025-08-26T07:50:51.336Z</lastmod>
+  </url>
+  <url>
+    <loc>https://autonity.github.io/docs.autonity.org-bakerloo/afp/afp-sdk-bindings-reference.html</loc>
+    <lastmod>2025-08-26T07:50:51.334Z</lastmod>
   </url>
   <url>
     <loc>https://autonity.github.io/docs.autonity.org-bakerloo/afp/margin-intent-accounts.html</loc>
-    <lastmod>2025-08-26T07:29:43.179Z</lastmod>
+    <lastmod>2025-08-26T07:50:51.336Z</lastmod>
   </url>
   <url>
     <loc>https://autonity.github.io/docs.autonity.org-bakerloo/afp/product-builders.html</loc>
-    <lastmod>2025-08-26T07:29:43.179Z</lastmod>
+    <lastmod>2025-08-26T07:50:51.337Z</lastmod>
   </url>
   <url>
     <loc>https://autonity.github.io/docs.autonity.org-bakerloo/afp/onchain-agents.html</loc>
-    <lastmod>2025-08-26T07:29:43.179Z</lastmod>
+    <lastmod>2025-08-26T07:50:51.336Z</lastmod>
   </url>
   <url>
     <loc>https://autonity.github.io/docs.autonity.org-bakerloo/afp/mark-price.html</loc>
-    <lastmod>2025-08-26T07:29:43.179Z</lastmod>
+    <lastmod>2025-08-26T07:50:51.336Z</lastmod>
   </url>
   <url>
     <loc>https://autonity.github.io/docs.autonity.org-bakerloo/afp/how-to-integrate-a-trading-protocol.html</loc>
-    <lastmod>2025-08-26T07:29:43.178Z</lastmod>
+    <lastmod>2025-08-26T07:50:51.336Z</lastmod>
   </url>
   <url>
     <loc>https://autonity.github.io/docs.autonity.org-bakerloo/afp/faq.html</loc>
-    <lastmod>2025-08-26T07:29:43.178Z</lastmod>
+    <lastmod>2025-08-26T07:50:51.335Z</lastmod>
   </url>
   <url>
     <loc>https://autonity.github.io/docs.autonity.org-bakerloo/afp/trading-protocols.html</loc>
-    <lastmod>2025-08-26T07:29:43.180Z</lastmod>
+    <lastmod>2025-08-26T07:50:51.337Z</lastmod>
   </url>
   <url>
     <loc>https://autonity.github.io/docs.autonity.org-bakerloo/afp/trading.html</loc>
-    <lastmod>2025-08-26T07:29:43.180Z</lastmod>
+    <lastmod>2025-08-26T07:50:51.337Z</lastmod>
   </url>
   <url>
     <loc>https://autonity.github.io/docs.autonity.org-bakerloo/afp/oracles.html</loc>
-    <lastmod>2025-08-26T07:29:43.179Z</lastmod>
+    <lastmod>2025-08-26T07:50:51.337Z</lastmod>
   </url>
   <url>
     <loc>https://autonity.github.io/docs.autonity.org-bakerloo/afp/index.html</loc>
-    <lastmod>2025-08-26T07:29:43.179Z</lastmod>
+    <lastmod>2025-08-26T07:50:51.336Z</lastmod>
   </url>
   <url>
     <loc>https://autonity.github.io/docs.autonity.org-bakerloo/afp/product-tokenomics.html</loc>
-    <lastmod>2025-08-26T07:29:43.180Z</lastmod>
+    <lastmod>2025-08-26T07:50:51.337Z</lastmod>
   </url>
   <url>
     <loc>https://autonity.github.io/docs.autonity.org-bakerloo/afp/for-developers.html</loc>
-    <lastmod>2025-08-26T07:29:43.178Z</lastmod>
+    <lastmod>2025-08-26T07:50:51.335Z</lastmod>
   </url>
   <url>
     <loc>https://autonity.github.io/docs.autonity.org-bakerloo/afp/fees.html</loc>
-    <lastmod>2025-08-26T07:29:43.178Z</lastmod>
+    <lastmod>2025-08-26T07:50:51.335Z</lastmod>
   </url>
   <url>
     <loc>https://autonity.github.io/docs.autonity.org-bakerloo/afp/trade-execution-and-clearing.html</loc>
-    <lastmod>2025-08-26T07:29:43.180Z</lastmod>
+    <lastmod>2025-08-26T07:50:51.337Z</lastmod>
   </url>
   <url>
     <loc>https://autonity.github.io/docs.autonity.org-bakerloo/afp/clearing-system.html</loc>
-    <lastmod>2025-08-26T07:29:43.178Z</lastmod>
+    <lastmod>2025-08-26T07:50:51.335Z</lastmod>
   </url>
 </urlset>
