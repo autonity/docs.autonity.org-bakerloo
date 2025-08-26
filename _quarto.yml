@@ -72,6 +72,8 @@ website:
         file: afp/glossary.qmd
       - section: "For Developers"
         contents:
+          - text: Python SDK Overview
+            file: afp/afp-sdk-overview.qmd
           - text: AFP Python SDK Reference
             file: afp/afp-sdk-reference.qmd
           - text: AFP Smart Contract Reference
