@@ -1,0 +1,23 @@
+---
+title: "Python SDK Overview"
+---
+
+Other than using the AFP website, you can trade also products programmatically
+using the provided Python SDK.
+
+The library is published on PyPI as the [afp-sdk](https://pypi.org/project/afp-sdk/)
+package. It can be installed in a virtualenv with:
+
+```py
+pip install afp-sdk
+```
+
+The `afp` package consists of the following:
+
+- [`afp` top-level module](afp-sdk-reference.html): High-level API for
+  interacting with the Clearing System and the AutEx exchange.
+- [`afp.bindings` submodule](afp-sdk-bindings-reference.html): Low-level API
+  that provides typed Python bindings for the Clearing System smart contracts.
+
+For usage examples please check the
+[afp-sdk GitHub repository](https://github.com/autonity/afp-sdk).
