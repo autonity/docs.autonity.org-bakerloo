@@ -21,15 +21,11 @@ website:
     contents:
       - section: "Autonomous Futures Protocol"
         contents:
-          - text: About the AFP
-            file: afp/about-afp.qmd
+          - file: afp/about-afp.qmd
             contents:
-              - text: Overall Architecture
-                file: afp/architecture.qmd
-          - text: Getting Started
-            file: afp/getting-started.qmd
-          - text: Clearing System
-            file: afp/clearing-system.qmd
+              - file: afp/architecture.qmd
+          - file: afp/getting-started.qmd
+          - file: afp/clearing-system.qmd
             contents:
                 - file: afp/margin-intent-accounts.qmd
                 - file: afp/liquidation.qmd
@@ -68,18 +64,15 @@ website:
                 - file: afp/final-settlement-price-agent.qmd
                 - file: afp/closeout-agent.qmd    
                 - file: afp/liquidation-agent.qmd    
-      - text: Glossary
-        file: afp/glossary.qmd
+      - file: afp/glossary.qmd
       - section: "For Developers"
         contents:
-          - text: Python SDK Overview
-            file: afp/afp-sdk-overview.qmd
-          - text: AFP Python SDK Reference
-            file: afp/afp-sdk-reference.qmd
-          - text: AFP Smart Contract Reference
-            file: afp/afp-smart-contract-reference.qmd
-          - text: AFP Smart Contract Python Bindings Reference
-            file: afp/afp-sdk-bindings-reference.qmd
+          - file: afp/afp-sdk-overview.qmd
+            contents:
+              - file: afp/afp-sdk-reference.qmd
+              - file: afp/afp-sdk-bindings-reference.qmd
+          - file: afp/afp-smart-contract-reference.qmd
+            
   page-footer:
     left: "© 2025 AFP Project"
     right: "Built with Quarto"

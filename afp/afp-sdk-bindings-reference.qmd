@@ -1,5 +1,5 @@
 ---
-title: "AFP Smart Contract Python Bindings Reference"
+title: "Smart Contract Python Bindings Reference"
 ---
 
 ## afp.bindings

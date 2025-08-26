@@ -1,5 +1,5 @@
 ---
-title: "Python SDK Overview"
+title: "SDK"
 ---
 
 Other than using the AFP website, you can trade also products programmatically
