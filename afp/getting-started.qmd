@@ -10,10 +10,10 @@ There are three prerequisites needed to start trading products on the AFP:
     - If you don’t have an EVM compatible wallet, you can easily set one up by downloading a browser-based wallet extension such as [MetaMask](https://metamask.io/download).
     - After downloading a wallet extension for your browser, follow the instructions to create a new wallet.
     - Your wallet has a secret recovery phrase – anyone with access to your seed phrase can access your funds. **Do not share your private key with anyone.** Best practice is to record your seed phrase and store it in a safe physical location.
-    - To add the Autonity network to your wallet, visit [chainlist.org](https://chainlist.org/?testnets=true&search=bakerloo) where you can connect your wallet and add the network automatically. Alternatively, you can manually add it by entering the details found [here]().
+    - To add the Autonity network to your wallet, visit [chainlist.org](https://chainlist.org/?testnets=true&search=bakerloo) where you can connect your wallet and add the network automatically. Alternatively, you can manually add it by entering the details found [here](https://docs.autonity.org/networks/testnet-bakerloo/#bakerloo-testnet-details).
 2. **Collateral**
     - It is up to the discretion of a Product Builder to decide which collateral a product will use but initially USDz will be supported.
-    - To get USDz, please see the subsequent section *How to get ATN and USDz on Autonity Bakerloo*]. Add the address of USDz on Bakerloo to your wallet so you can view your balance: `0x7914e33423232885C1a3350c26bb420d23Ff31Bb`. 
+    - To get USDz, please see the subsequent section *How to get ATN and USDz on Autonity Bakerloo*. Add the address of USDz on Bakerloo to your wallet so you can view your balance: `0x7914e33423232885C1a3350c26bb420d23Ff31Bb`. 
 3. **Auton (ATN)**
     - ATN is used for paying gas fees on Autonity. When you make a transaction (e.g. to deposit your collateral) you will have to pay gas for that transaction to be included in the blockchain. Note that trading products on AutEx is gas-less. 
     - On Bakerloo, ATN can be acquired through the faucet: https://autonity.faucetme.pro/
