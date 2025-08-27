@@ -448,7 +448,7 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#what-do-i-need-to-start-trading-through-the-browser" id="toc-what-do-i-need-to-start-trading-through-the-browser" class="nav-link active" data-scroll-target="#what-do-i-need-to-start-trading-through-the-browser">What do I need to start trading through the browser?</a></li>
-  <li><a href="#how-to-get-atn-and-usdc-on-autonity-mainnet" id="toc-how-to-get-atn-and-usdc-on-autonity-mainnet" class="nav-link" data-scroll-target="#how-to-get-atn-and-usdc-on-autonity-mainnet">How to get ATN and USDC on Autonity Mainnet</a></li>
+  <li><a href="#how-to-get-atn-and-usdz-on-autonity-bakerloo" id="toc-how-to-get-atn-and-usdz-on-autonity-bakerloo" class="nav-link" data-scroll-target="#how-to-get-atn-and-usdz-on-autonity-bakerloo">How to get ATN and USDz on Autonity Bakerloo</a></li>
   <li><a href="#how-to-create-and-fund-a-margin-account-on-the-afp" id="toc-how-to-create-and-fund-a-margin-account-on-the-afp" class="nav-link" data-scroll-target="#how-to-create-and-fund-a-margin-account-on-the-afp">How to create and fund a margin account on the AFP</a></li>
   <li><a href="#how-to-start-trading-products-on-the-afp" id="toc-how-to-start-trading-products-on-the-afp" class="nav-link" data-scroll-target="#how-to-start-trading-products-on-the-afp">How to start trading products on the AFP</a></li>
   </ul>
@@ -480,31 +480,30 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="what-do-i-need-to-start-trading-through-the-browser">What do I need to start trading through the browser?</h2>
 <p>There are three prerequisites needed to start trading products on the AFP:</p>
 <ol type="1">
-<li><strong>An EVM compatible wallet</strong> (e.g., Rabby, MetaMask, WalletConnect, Coinbase Wallet) with the Autonity Piccadilly network added to it.
+<li><strong>An EVM compatible wallet</strong> (e.g., Rabby, MetaMask, WalletConnect, Coinbase Wallet) with the Autonity Bakerloo network added to it.
 <ul>
 <li>If you don’t have an EVM compatible wallet, you can easily set one up by downloading a browser-based wallet extension such as <a href="https://metamask.io/download">MetaMask</a>.</li>
 <li>After downloading a wallet extension for your browser, follow the instructions to create a new wallet.</li>
 <li>Your wallet has a secret recovery phrase – anyone with access to your seed phrase can access your funds. <strong>Do not share your private key with anyone.</strong> Best practice is to record your seed phrase and store it in a safe physical location.</li>
-<li>To add the Autonity network to your wallet, visit <a href="https://chainlist.org/?testnets=true&amp;search=piccadilly">chainlist.org</a> where you can connect your wallet and add the network automatically. Alternatively, you can manually add it by entering the details found <a href="https://chainlist.org/?testnets=true&amp;search=piccadilly">here</a>.</li>
+<li>To add the Autonity network to your wallet, visit <a href="https://chainlist.org/?testnets=true&amp;search=bakerloo">chainlist.org</a> where you can connect your wallet and add the network automatically. Alternatively, you can manually add it by entering the details found <a href="">here</a>.</li>
 </ul></li>
 <li><strong>Collateral</strong>
 <ul>
 <li>It is up to the discretion of a Product Builder to decide which collateral a product will use but initially USDz will be supported.</li>
-<li>Add the address of USDz on Bakerloo to your wallet so you can view your balance: <code>0x7914e33423232885C1a3350c26bb420d23Ff31Bb</code>.</li>
+<li>To get USDz, please see the subsequent section <em>How to get ATN and USDz on Autonity Bakerloo</em>]. Add the address of USDz on Bakerloo to your wallet so you can view your balance: <code>0x7914e33423232885C1a3350c26bb420d23Ff31Bb</code>.</li>
 </ul></li>
 <li><strong>Auton (ATN)</strong>
 <ul>
-<li>ATN is used for paying gas fees on the Autonity network. When you make a transaction (e.g.&nbsp;to deposit your collateral) you will have to pay gas for that transaction to be included in the blockchain. Note that trading products on AutEx is gas-less.</li>
-<li>On Bakerloo, ATN can be acquired through the fauct: https://autonity.faucetme.pro/</li>
+<li>ATN is used for paying gas fees on Autonity. When you make a transaction (e.g.&nbsp;to deposit your collateral) you will have to pay gas for that transaction to be included in the blockchain. Note that trading products on AutEx is gas-less.</li>
+<li>On Bakerloo, ATN can be acquired through the faucet: https://autonity.faucetme.pro/</li>
 </ul></li>
 </ol>
 </section>
-<section id="how-to-get-atn-and-usdc-on-autonity-mainnet" class="level2">
-<h2 class="anchored" data-anchor-id="how-to-get-atn-and-usdc-on-autonity-mainnet">How to get ATN and USDC on Autonity Mainnet</h2>
+<section id="how-to-get-atn-and-usdz-on-autonity-bakerloo" class="level2">
+<h2 class="anchored" data-anchor-id="how-to-get-atn-and-usdz-on-autonity-bakerloo">How to get ATN and USDz on Autonity Bakerloo</h2>
 <ol type="1">
-<li>You will need USDC on another blockchain (e.g.&nbsp;Polygon, Avalanche, Base, Optimism, Ethereum – see the full list <a href="https://chainlist.org/?search=usdc">here</a>) that you will then be able to bridge over to Autonity. To purchase USDC on one of these blockchains you can deposit funds on a centralised exchange and purchase it there with fiat before moving it to your EVM wallet.</li>
-<li>Once you have USDC on another blockchain you can bridge your USDC over to Autonity via the bridge. Once you have successfully bridged your USDC, you will receive a small amount of ATN which you can use to make transactions with on Autonity.</li>
-<li>Use some of your USDC to purchase a minimal amount of additional ATN to ensure you don’t run out of gas and strand your collateral. This can be done on a DEX such as the DAX.</li>
+<li>Receive funding by visiting https://proto-afp.pages.dev/get-funded and filling out the form. This will require you to sign a message using your EVM compatible wallet to prove ownership of your wallet.</li>
+<li>Once funded, you will receive USDz, the play-money collateral token used in the AFP on Bakerloo, and a minimal amount of ATN to pay for gas on the Bakerloo network. Additional ATN can be requested through the dedicated faucet: https://autonity.faucetme.pro/</li>
 </ol>
 </section>
 <section id="how-to-create-and-fund-a-margin-account-on-the-afp" class="level2">
