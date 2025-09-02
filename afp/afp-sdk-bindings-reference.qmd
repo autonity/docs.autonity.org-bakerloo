@@ -29,8 +29,10 @@ Typed bindings around the smart contracts of the Autonomous Futures Protocol.
 - [**ProductState**](#afp.bindings.ProductState) – Port of `enum ProductState` on the ProductRegistry contract.
 - [**Settlement**](#afp.bindings.Settlement) – Port of `struct Settlement` on the IMarginAccount contract.
 - [**Side**](#afp.bindings.Side) – Port of `enum Side` on the ClearingFacet contract.
+- [**SystemViewer**](#afp.bindings.SystemViewer) – SystemViewer contract binding.
 - [**Trade**](#afp.bindings.Trade) – Port of `struct Trade` on the IClearing contract.
 - [**TradingProtocol**](#afp.bindings.TradingProtocol) – TradingProtocol contract binding.
+- [**UserMarginAccountData**](#afp.bindings.UserMarginAccountData) – Port of `struct UserMarginAccountData` on the ISystemViewer contract.
 
 ### afp.bindings.AuctionConfig
 
@@ -116,7 +118,7 @@ Port of `struct BidData` on the IAuctioneer contract.
 - [**price**](#afp.bindings.BidData.price) (<code>[int](#int)</code>) –
 - [**product_id**](#afp.bindings.BidData.product_id) (<code>[HexBytes](#hexbytes.HexBytes)</code>) –
 - [**quantity**](#afp.bindings.BidData.quantity) (<code>[int](#int)</code>) –
-- [**side**](#afp.bindings.BidData.side) (<code>[Side](#afp.bindings.auctioneer_facet.Side)</code>) –
+- [**side**](#afp.bindings.BidData.side) (<code>[Side](#afp.bindings.clearing_facet.Side)</code>) –
 
 #### afp.bindings.BidData.price
 
@@ -680,7 +682,7 @@ Binding for `mutualizeLosses` on the BankruptcyFacet contract.
 - **bankrupt_account_id** (<code>[ChecksumAddress](#eth_typing.ChecksumAddress)</code>) –
 - **collateral_token** (<code>[ChecksumAddress](#eth_typing.ChecksumAddress)</code>) –
 - **product_ids** (<code>[List](#typing.List)\[[HexBytes](#hexbytes.HexBytes)\]</code>) –
-- **laas** (<code>[List](#typing.List)\[[ChecksumAddress](#eth_typing.ChecksumAddress)\]</code>) –
+- **laas** (<code>[List](#typing.List)\[[List](#typing.List)\[[ChecksumAddress](#eth_typing.ChecksumAddress)\]\]</code>) –
 
 **Returns:**
 
@@ -893,7 +895,7 @@ Port of `struct Config` on the IClearing contract.
 
 **Attributes:**
 
-- [**auction_config**](#afp.bindings.Config.auction_config) (<code>[AuctionConfig](#afp.bindings.clearing_facet.AuctionConfig)</code>) –
+- [**auction_config**](#afp.bindings.Config.auction_config) (<code>[AuctionConfig](#afp.bindings.auctioneer_facet.AuctionConfig)</code>) –
 - [**clearing_config**](#afp.bindings.Config.clearing_config) (<code>[ClearingConfig](#afp.bindings.clearing_facet.ClearingConfig)</code>) –
 
 #### afp.bindings.Config.auction_config
@@ -3055,6 +3057,378 @@ ASK = 1
 BID = 0
 ```
 
+### afp.bindings.SystemViewer
+
+```python
+SystemViewer(w3)
+```
+
+Bases: <code>[SystemViewer](#afp.bindings.system_viewer.SystemViewer)</code>
+
+SystemViewer contract binding.
+
+**Parameters:**
+
+- **w3** (<code>[Web3](#web3.Web3)</code>) –
+
+**Functions:**
+
+- [**clearing**](#afp.bindings.SystemViewer.clearing) – Binding for `clearing` on the SystemViewer contract.
+- [**initialize**](#afp.bindings.SystemViewer.initialize) – Binding for `initialize` on the SystemViewer contract.
+- [**mae_by_collateral_asset**](#afp.bindings.SystemViewer.mae_by_collateral_asset) – Binding for `maeByCollateralAsset` on the SystemViewer contract.
+- [**mae_by_collateral_assets**](#afp.bindings.SystemViewer.mae_by_collateral_assets) – Binding for `maeByCollateralAssets` on the SystemViewer contract.
+- [**mae_checks_by_collateral_asset**](#afp.bindings.SystemViewer.mae_checks_by_collateral_asset) – Binding for `maeChecksByCollateralAsset` on the SystemViewer contract.
+- [**margin_account_registry**](#afp.bindings.SystemViewer.margin_account_registry) – Binding for `marginAccountRegistry` on the SystemViewer contract.
+- [**owner**](#afp.bindings.SystemViewer.owner) – Binding for `owner` on the SystemViewer contract.
+- [**positions_by_collateral_asset**](#afp.bindings.SystemViewer.positions_by_collateral_asset) – Binding for `positionsByCollateralAsset` on the SystemViewer contract.
+- [**positions_by_collateral_assets**](#afp.bindings.SystemViewer.positions_by_collateral_assets) – Binding for `positionsByCollateralAssets` on the SystemViewer contract.
+- [**product_details**](#afp.bindings.SystemViewer.product_details) – Binding for `productDetails` on the SystemViewer contract.
+- [**product_registry**](#afp.bindings.SystemViewer.product_registry) – Binding for `productRegistry` on the SystemViewer contract.
+- [**product_states**](#afp.bindings.SystemViewer.product_states) – Binding for `productStates` on the SystemViewer contract.
+- [**proxiable_uuid**](#afp.bindings.SystemViewer.proxiable_uuid) – Binding for `proxiableUUID` on the SystemViewer contract.
+- [**renounce_ownership**](#afp.bindings.SystemViewer.renounce_ownership) – Binding for `renounceOwnership` on the SystemViewer contract.
+- [**transfer_ownership**](#afp.bindings.SystemViewer.transfer_ownership) – Binding for `transferOwnership` on the SystemViewer contract.
+- [**upgrade_interface_version**](#afp.bindings.SystemViewer.upgrade_interface_version) – Binding for `UPGRADE_INTERFACE_VERSION` on the SystemViewer contract.
+- [**upgrade_to_and_call**](#afp.bindings.SystemViewer.upgrade_to_and_call) – Binding for `upgradeToAndCall` on the SystemViewer contract.
+- [**user_margin_data_by_collateral_asset**](#afp.bindings.SystemViewer.user_margin_data_by_collateral_asset) – Binding for `userMarginDataByCollateralAsset` on the SystemViewer contract.
+- [**user_margin_data_by_collateral_assets**](#afp.bindings.SystemViewer.user_margin_data_by_collateral_assets) – Binding for `userMarginDataByCollateralAssets` on the SystemViewer contract.
+- [**valuations**](#afp.bindings.SystemViewer.valuations) – Binding for `valuations` on the SystemViewer contract.
+
+**Attributes:**
+
+- [**Initialized**](#afp.bindings.SystemViewer.Initialized) (<code>[ContractEvent](#web3.contract.contract.ContractEvent)</code>) – Binding for `event Initialized` on the SystemViewer contract.
+- [**OwnershipTransferred**](#afp.bindings.SystemViewer.OwnershipTransferred) (<code>[ContractEvent](#web3.contract.contract.ContractEvent)</code>) – Binding for `event OwnershipTransferred` on the SystemViewer contract.
+- [**Upgraded**](#afp.bindings.SystemViewer.Upgraded) (<code>[ContractEvent](#web3.contract.contract.ContractEvent)</code>) – Binding for `event Upgraded` on the SystemViewer contract.
+
+#### afp.bindings.SystemViewer.Initialized
+
+```python
+Initialized: contract.ContractEvent
+```
+
+Binding for `event Initialized` on the SystemViewer contract.
+
+#### afp.bindings.SystemViewer.OwnershipTransferred
+
+```python
+OwnershipTransferred: contract.ContractEvent
+```
+
+Binding for `event OwnershipTransferred` on the SystemViewer contract.
+
+#### afp.bindings.SystemViewer.Upgraded
+
+```python
+Upgraded: contract.ContractEvent
+```
+
+Binding for `event Upgraded` on the SystemViewer contract.
+
+#### afp.bindings.SystemViewer.clearing
+
+```python
+clearing()
+```
+
+Binding for `clearing` on the SystemViewer contract.
+
+**Returns:**
+
+- <code>[ChecksumAddress](#eth_typing.ChecksumAddress)</code> –
+
+#### afp.bindings.SystemViewer.initialize
+
+```python
+initialize(_clearing, _product_registry, _margin_account_registry)
+```
+
+Binding for `initialize` on the SystemViewer contract.
+
+**Parameters:**
+
+- **\_clearing** (<code>[ChecksumAddress](#eth_typing.ChecksumAddress)</code>) –
+- **\_product_registry** (<code>[ChecksumAddress](#eth_typing.ChecksumAddress)</code>) –
+- **\_margin_account_registry** (<code>[ChecksumAddress](#eth_typing.ChecksumAddress)</code>) –
+
+**Returns:**
+
+- <code>[ContractFunction](#web3.contract.contract.ContractFunction)</code> – A contract function instance to be sent in a transaction.
+
+#### afp.bindings.SystemViewer.mae_by_collateral_asset
+
+```python
+mae_by_collateral_asset(collateral_asset, accounts)
+```
+
+Binding for `maeByCollateralAsset` on the SystemViewer contract.
+
+**Parameters:**
+
+- **collateral_asset** (<code>[ChecksumAddress](#eth_typing.ChecksumAddress)</code>) –
+- **accounts** (<code>[List](#typing.List)\[[ChecksumAddress](#eth_typing.ChecksumAddress)\]</code>) –
+
+**Returns:**
+
+- <code>[List](#typing.List)\[[int](#int)\]</code> –
+
+#### afp.bindings.SystemViewer.mae_by_collateral_assets
+
+```python
+mae_by_collateral_assets(collateral_assets, accounts)
+```
+
+Binding for `maeByCollateralAssets` on the SystemViewer contract.
+
+**Parameters:**
+
+- **collateral_assets** (<code>[List](#typing.List)\[[ChecksumAddress](#eth_typing.ChecksumAddress)\]</code>) –
+- **accounts** (<code>[List](#typing.List)\[[ChecksumAddress](#eth_typing.ChecksumAddress)\]</code>) –
+
+**Returns:**
+
+- <code>[List](#typing.List)\[[int](#int)\]</code> –
+
+#### afp.bindings.SystemViewer.mae_checks_by_collateral_asset
+
+```python
+mae_checks_by_collateral_asset(collateral_asset, accounts, settlements)
+```
+
+Binding for `maeChecksByCollateralAsset` on the SystemViewer contract.
+
+**Parameters:**
+
+- **collateral_asset** (<code>[ChecksumAddress](#eth_typing.ChecksumAddress)</code>) –
+- **accounts** (<code>[List](#typing.List)\[[ChecksumAddress](#eth_typing.ChecksumAddress)\]</code>) –
+- **settlements** (<code>[List](#typing.List)\[[Settlement](#afp.bindings.margin_account.Settlement)\]</code>) –
+
+**Returns:**
+
+- <code>[List](#typing.List)\[[bool](#bool)\]</code> –
+- <code>[List](#typing.List)\[[int](#int)\]</code> –
+- <code>[List](#typing.List)\[[int](#int)\]</code> –
+
+#### afp.bindings.SystemViewer.margin_account_registry
+
+```python
+margin_account_registry()
+```
+
+Binding for `marginAccountRegistry` on the SystemViewer contract.
+
+**Returns:**
+
+- <code>[ChecksumAddress](#eth_typing.ChecksumAddress)</code> –
+
+#### afp.bindings.SystemViewer.owner
+
+```python
+owner()
+```
+
+Binding for `owner` on the SystemViewer contract.
+
+**Returns:**
+
+- <code>[ChecksumAddress](#eth_typing.ChecksumAddress)</code> –
+
+#### afp.bindings.SystemViewer.positions_by_collateral_asset
+
+```python
+positions_by_collateral_asset(collateral_asset, accounts)
+```
+
+Binding for `positionsByCollateralAsset` on the SystemViewer contract.
+
+**Parameters:**
+
+- **collateral_asset** (<code>[ChecksumAddress](#eth_typing.ChecksumAddress)</code>) –
+- **accounts** (<code>[List](#typing.List)\[[ChecksumAddress](#eth_typing.ChecksumAddress)\]</code>) –
+
+**Returns:**
+
+- <code>[List](#typing.List)\[[List](#typing.List)\[[PositionData](#afp.bindings.margin_account.PositionData)\]\]</code> –
+
+#### afp.bindings.SystemViewer.positions_by_collateral_assets
+
+```python
+positions_by_collateral_assets(collateral_assets, accounts)
+```
+
+Binding for `positionsByCollateralAssets` on the SystemViewer contract.
+
+**Parameters:**
+
+- **collateral_assets** (<code>[List](#typing.List)\[[ChecksumAddress](#eth_typing.ChecksumAddress)\]</code>) –
+- **accounts** (<code>[List](#typing.List)\[[ChecksumAddress](#eth_typing.ChecksumAddress)\]</code>) –
+
+**Returns:**
+
+- <code>[List](#typing.List)\[[List](#typing.List)\[[PositionData](#afp.bindings.margin_account.PositionData)\]\]</code> –
+
+#### afp.bindings.SystemViewer.product_details
+
+```python
+product_details(product_ids)
+```
+
+Binding for `productDetails` on the SystemViewer contract.
+
+**Parameters:**
+
+- **product_ids** (<code>[List](#typing.List)\[[HexBytes](#hexbytes.HexBytes)\]</code>) –
+
+**Returns:**
+
+- <code>[List](#typing.List)\[[Product](#afp.bindings.product_registry.Product)\]</code> –
+
+#### afp.bindings.SystemViewer.product_registry
+
+```python
+product_registry()
+```
+
+Binding for `productRegistry` on the SystemViewer contract.
+
+**Returns:**
+
+- <code>[ChecksumAddress](#eth_typing.ChecksumAddress)</code> –
+
+#### afp.bindings.SystemViewer.product_states
+
+```python
+product_states(product_ids)
+```
+
+Binding for `productStates` on the SystemViewer contract.
+
+**Parameters:**
+
+- **product_ids** (<code>[List](#typing.List)\[[HexBytes](#hexbytes.HexBytes)\]</code>) –
+
+**Returns:**
+
+- <code>[List](#typing.List)\[[ProductState](#afp.bindings.product_registry.ProductState)\]</code> –
+
+#### afp.bindings.SystemViewer.proxiable_uuid
+
+```python
+proxiable_uuid()
+```
+
+Binding for `proxiableUUID` on the SystemViewer contract.
+
+**Returns:**
+
+- <code>[HexBytes](#hexbytes.HexBytes)</code> –
+
+#### afp.bindings.SystemViewer.renounce_ownership
+
+```python
+renounce_ownership()
+```
+
+Binding for `renounceOwnership` on the SystemViewer contract.
+
+**Returns:**
+
+- <code>[ContractFunction](#web3.contract.contract.ContractFunction)</code> – A contract function instance to be sent in a transaction.
+
+#### afp.bindings.SystemViewer.transfer_ownership
+
+```python
+transfer_ownership(new_owner)
+```
+
+Binding for `transferOwnership` on the SystemViewer contract.
+
+**Parameters:**
+
+- **new_owner** (<code>[ChecksumAddress](#eth_typing.ChecksumAddress)</code>) –
+
+**Returns:**
+
+- <code>[ContractFunction](#web3.contract.contract.ContractFunction)</code> – A contract function instance to be sent in a transaction.
+
+#### afp.bindings.SystemViewer.upgrade_interface_version
+
+```python
+upgrade_interface_version()
+```
+
+Binding for `UPGRADE_INTERFACE_VERSION` on the SystemViewer contract.
+
+**Returns:**
+
+- <code>[str](#str)</code> –
+
+#### afp.bindings.SystemViewer.upgrade_to_and_call
+
+```python
+upgrade_to_and_call(new_implementation, data)
+```
+
+Binding for `upgradeToAndCall` on the SystemViewer contract.
+
+**Parameters:**
+
+- **new_implementation** (<code>[ChecksumAddress](#eth_typing.ChecksumAddress)</code>) –
+- **data** (<code>[HexBytes](#hexbytes.HexBytes)</code>) –
+
+**Returns:**
+
+- <code>[ContractFunction](#web3.contract.contract.ContractFunction)</code> – A contract function instance to be sent in a transaction.
+
+#### afp.bindings.SystemViewer.user_margin_data_by_collateral_asset
+
+```python
+user_margin_data_by_collateral_asset(collateral_asset, accounts)
+```
+
+Binding for `userMarginDataByCollateralAsset` on the SystemViewer contract.
+
+**Parameters:**
+
+- **collateral_asset** (<code>[ChecksumAddress](#eth_typing.ChecksumAddress)</code>) –
+- **accounts** (<code>[List](#typing.List)\[[ChecksumAddress](#eth_typing.ChecksumAddress)\]</code>) –
+
+**Returns:**
+
+- <code>[List](#typing.List)\[[UserMarginAccountData](#afp.bindings.system_viewer.UserMarginAccountData)\]</code> –
+
+#### afp.bindings.SystemViewer.user_margin_data_by_collateral_assets
+
+```python
+user_margin_data_by_collateral_assets(collateral_assets, accounts)
+```
+
+Binding for `userMarginDataByCollateralAssets` on the SystemViewer contract.
+
+**Parameters:**
+
+- **collateral_assets** (<code>[List](#typing.List)\[[ChecksumAddress](#eth_typing.ChecksumAddress)\]</code>) –
+- **accounts** (<code>[List](#typing.List)\[[ChecksumAddress](#eth_typing.ChecksumAddress)\]</code>) –
+
+**Returns:**
+
+- <code>[List](#typing.List)\[[UserMarginAccountData](#afp.bindings.system_viewer.UserMarginAccountData)\]</code> –
+
+#### afp.bindings.SystemViewer.valuations
+
+```python
+valuations(product_ids)
+```
+
+Binding for `valuations` on the SystemViewer contract.
+
+**Parameters:**
+
+- **product_ids** (<code>[List](#typing.List)\[[HexBytes](#hexbytes.HexBytes)\]</code>) –
+
+**Returns:**
+
+- <code>[List](#typing.List)\[[int](#int)\]</code> –
+
 ### afp.bindings.Trade
 
 ```python
@@ -3173,6 +3547,7 @@ TradingProtocol contract binding.
 - [**RoleAdminChanged**](#afp.bindings.TradingProtocol.RoleAdminChanged) (<code>[ContractEvent](#web3.contract.contract.ContractEvent)</code>) – Binding for `event RoleAdminChanged` on the TradingProtocol contract.
 - [**RoleGranted**](#afp.bindings.TradingProtocol.RoleGranted) (<code>[ContractEvent](#web3.contract.contract.ContractEvent)</code>) – Binding for `event RoleGranted` on the TradingProtocol contract.
 - [**RoleRevoked**](#afp.bindings.TradingProtocol.RoleRevoked) (<code>[ContractEvent](#web3.contract.contract.ContractEvent)</code>) – Binding for `event RoleRevoked` on the TradingProtocol contract.
+- [**SequenceExecuted**](#afp.bindings.TradingProtocol.SequenceExecuted) (<code>[ContractEvent](#web3.contract.contract.ContractEvent)</code>) – Binding for `event SequenceExecuted` on the TradingProtocol contract.
 - [**Upgraded**](#afp.bindings.TradingProtocol.Upgraded) (<code>[ContractEvent](#web3.contract.contract.ContractEvent)</code>) – Binding for `event Upgraded` on the TradingProtocol contract.
 
 #### afp.bindings.TradingProtocol.Initialized
@@ -3206,6 +3581,14 @@ RoleRevoked: contract.ContractEvent
 ```
 
 Binding for `event RoleRevoked` on the TradingProtocol contract.
+
+#### afp.bindings.TradingProtocol.SequenceExecuted
+
+```python
+SequenceExecuted: contract.ContractEvent
+```
+
+Binding for `event SequenceExecuted` on the TradingProtocol contract.
 
 #### afp.bindings.TradingProtocol.Upgraded
 
@@ -3286,7 +3669,7 @@ Binding for `execute` on the TradingProtocol contract.
 
 **Parameters:**
 
-- **trade** (<code>[Trade](#afp.bindings.trading_protocol.Trade)</code>) –
+- **trade** (<code>[Trade](#afp.bindings.clearing_facet.Trade)</code>) –
 - **fallback_on_failure** (<code>[bool](#bool)</code>) –
 
 **Returns:**
@@ -3303,7 +3686,7 @@ Binding for `executeSequence` on the TradingProtocol contract.
 
 **Parameters:**
 
-- **trades** (<code>[List](#typing.List)\[[Trade](#afp.bindings.trading_protocol.Trade)\]</code>) –
+- **trades** (<code>[List](#typing.List)\[[Trade](#afp.bindings.clearing_facet.Trade)\]</code>) –
 - **fallback_on_failure** (<code>[bool](#bool)</code>) –
 
 **Returns:**
@@ -3560,3 +3943,50 @@ Binding for `withdraw` on the TradingProtocol contract.
 **Returns:**
 
 - <code>[ContractFunction](#web3.contract.contract.ContractFunction)</code> – A contract function instance to be sent in a transaction.
+
+### afp.bindings.UserMarginAccountData
+
+```python
+UserMarginAccountData(collateral_asset, margin_account_id, mae, mmu, positions)
+```
+
+Port of `struct UserMarginAccountData` on the ISystemViewer contract.
+
+**Attributes:**
+
+- [**collateral_asset**](#afp.bindings.UserMarginAccountData.collateral_asset) (<code>[ChecksumAddress](#eth_typing.ChecksumAddress)</code>) –
+- [**mae**](#afp.bindings.UserMarginAccountData.mae) (<code>[int](#int)</code>) –
+- [**margin_account_id**](#afp.bindings.UserMarginAccountData.margin_account_id) (<code>[ChecksumAddress](#eth_typing.ChecksumAddress)</code>) –
+- [**mmu**](#afp.bindings.UserMarginAccountData.mmu) (<code>[int](#int)</code>) –
+- [**positions**](#afp.bindings.UserMarginAccountData.positions) (<code>[List](#typing.List)\[[PositionData](#afp.bindings.margin_account.PositionData)\]</code>) –
+
+#### afp.bindings.UserMarginAccountData.collateral_asset
+
+```python
+collateral_asset: eth_typing.ChecksumAddress
+```
+
+#### afp.bindings.UserMarginAccountData.mae
+
+```python
+mae: int
+```
+
+#### afp.bindings.UserMarginAccountData.margin_account_id
+
+```python
+margin_account_id: eth_typing.ChecksumAddress
+```
+
+#### afp.bindings.UserMarginAccountData.mmu
+
+```python
+mmu: int
+```
+
+#### afp.bindings.UserMarginAccountData.positions
+
+```python
+positions: typing.List[PositionData]
+```
+
