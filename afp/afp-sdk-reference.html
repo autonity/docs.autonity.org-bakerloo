@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.33">
+<meta name="generator" content="quarto-1.7.34">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -74,10 +74,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-0a33faad1e9af8af22a979457b77d68c.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-c08a889a873e0a9b3f9127156cdb9cc0.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-a9e8ea38a6383c0f82ea5ba74fb254b4.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-1e15dfede0c6c2c8bdc54d3c0dc1fd84.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -599,7 +599,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><strong>oracle_address</strong> (<code><a href="#str">str</a></code>) –</li>
 <li><strong>fsv_decimals</strong> (<code><a href="#int">int</a></code>) –</li>
 <li><strong>fsp_alpha</strong> (<code><a href="#decimal.Decimal">Decimal</a></code>) –</li>
-<li><strong>fsp_beta</strong> (<code><a href="#int">int</a></code>) –</li>
+<li><strong>fsp_beta</strong> (<code><a href="#decimal.Decimal">Decimal</a></code>) –</li>
 <li><strong>fsv_calldata</strong> (<code><a href="#str">str</a></code>) –</li>
 <li><strong>start_time</strong> (<code><a href="#datetime.datetime">datetime</a></code>) –</li>
 <li><strong>earliest_fsp_submission_time</strong> (<code><a href="#datetime.datetime">datetime</a></code>) –</li>
@@ -967,9 +967,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
 <section id="afp.trading.create_intent" class="level4">
 <h4 class="anchored" data-anchor-id="afp.trading.create_intent">afp.Trading.create_intent</h4>
-<div class="sourceCode" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>create_intent(<span class="op">*</span>, product, side, limit_price, quantity, max_trading_fee_rate, good_until_time, margin_account_id<span class="op">=</span><span class="va">None</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>create_intent(<span class="op">*</span>, product, side, limit_price, quantity, max_trading_fee_rate, good_until_time, margin_account_id<span class="op">=</span><span class="va">None</span>, rounding<span class="op">=</span><span class="va">None</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Creates an intent with the given intent data, generates its hash and signs it with the configured account’s private key.</p>
 <p>The intent account’s address is derived from the private key. The intent account is assumed to be the same as the margin account if the margin account ID is not specified.</p>
+<p>The limit price must have at most as many fractional digits as the product’s tick size, or if <code>rounding</code> is specified then the limit price is rounded to the appropriate number of fractional digits. <code>rounding</code> may be one of <code>ROUND_CEILING</code>, <code>ROUND_FLOOR</code>, <code>ROUND_UP</code>, <code>ROUND_DOWN</code>, <code>ROUND_HALF_UP</code>, <code>ROUND_HALF_DOWN</code>, <code>ROUND_HALF_EVEN</code> and <code>ROUND_05UP</code>; see the rounding modes of the <code>decimal</code> module of the Python Standard Library.</p>
 <p><strong>Parameters:</strong></p>
 <ul>
 <li><strong>product</strong> (<code><a href="#afp.schemas.ExchangeProduct">ExchangeProduct</a></code>) –</li>
@@ -979,6 +980,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><strong>max_trading_fee_rate</strong> (<code><a href="#decimal.Decimal">Decimal</a></code>) –</li>
 <li><strong>good_until_time</strong> (<code><a href="#datetime.datetime.datetime">datetime</a></code>) –</li>
 <li><strong>margin_account_id</strong> (<code><a href="#str">str</a></code>) –</li>
+<li><strong>rounding</strong> (<code><a href="#str">str</a></code>) – A rounding mode of the <code>decimal</code> module or <code>None</code> for no rounding.</li>
 </ul>
 <p><strong>Returns:</strong></p>
 <ul>
