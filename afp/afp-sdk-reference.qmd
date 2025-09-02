@@ -104,7 +104,7 @@ quotation symbol is retrieved from the collateral asset.
 - **oracle_address** (<code>[str](#str)</code>) –
 - **fsv_decimals** (<code>[int](#int)</code>) –
 - **fsp_alpha** (<code>[Decimal](#decimal.Decimal)</code>) –
-- **fsp_beta** (<code>[int](#int)</code>) –
+- **fsp_beta** (<code>[Decimal](#decimal.Decimal)</code>) –
 - **fsv_calldata** (<code>[str](#str)</code>) –
 - **start_time** (<code>[datetime](#datetime.datetime)</code>) –
 - **earliest_fsp_submission_time** (<code>[datetime](#datetime.datetime)</code>) –
@@ -553,7 +553,7 @@ Authenticates with the exchange on creation.
 #### afp.Trading.create_intent
 
 ```python
-create_intent(*, product, side, limit_price, quantity, max_trading_fee_rate, good_until_time, margin_account_id=None)
+create_intent(*, product, side, limit_price, quantity, max_trading_fee_rate, good_until_time, margin_account_id=None, rounding=None)
 ```
 
 Creates an intent with the given intent data, generates its hash and signs it
@@ -562,6 +562,13 @@ with the configured account's private key.
 The intent account's address is derived from the private key. The intent account
 is assumed to be the same as the margin account if the margin account ID is not
 specified.
+
+The limit price must have at most as many fractional digits as the product's
+tick size, or if `rounding` is specified then the limit price is rounded to the
+appropriate number of fractional digits. `rounding` may be one of
+`ROUND_CEILING`, `ROUND_FLOOR`, `ROUND_UP`, `ROUND_DOWN`, `ROUND_HALF_UP`,
+`ROUND_HALF_DOWN`, `ROUND_HALF_EVEN` and `ROUND_05UP`; see the rounding modes of
+the `decimal` module of the Python Standard Library.
 
 **Parameters:**
 
@@ -572,6 +579,7 @@ specified.
 - **max_trading_fee_rate** (<code>[Decimal](#decimal.Decimal)</code>) –
 - **good_until_time** (<code>[datetime](#datetime.datetime.datetime)</code>) –
 - **margin_account_id** (<code>[str](#str)</code>) –
+- **rounding** (<code>[str](#str)</code>) – A rounding mode of the `decimal` module or `None` for no rounding.
 
 **Returns:**
 
@@ -769,3 +777,4 @@ Sends an intent expressing a limit order to the exchange.
 **Raises:**
 
 - <code>[ValidationError](#afp.exceptions.ValidationError)</code> – If the exchange rejects the intent.
+
