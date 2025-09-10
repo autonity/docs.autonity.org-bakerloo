@@ -5,7 +5,7 @@ title: "Product Types and Specification"
 ## Product types
 The AFP introduces a new suite of derivatives products that are not limited to spot underlyings. This means that products can be created on _any_ verifiable timeseries, opening up the possibility for a completely new suite of financial products. Examples of such products are near infinite, as if a timeseries can be reliable reported, then a product can be created for it on the AFP. However, product creation is only the beginning as it is in then in the best interest of the Product Builder to create deep liquidity in their products, as they share in the clearing volume of deployed products.
 
-In the current version of the AFP, all products are Dated Futures, meaning they have an expiry time and a final settlement price that the product will clear at once the `Minimum Tradeout Interval` elapses. This implies that the only value that is required to be reported on-chain by an oracle, is the [final settlement price](/final-settlement-price.qmd).
+In the current version of the AFP, all products are Dated Futures, meaning they have an expiry time and a final settlement price that the product will clear at once the `Minimum Tradeout Interval` elapses. This implies that the only value that is required to be reported on-chain by an oracle, is the [final settlement price](/afp/final-settlement-price.qmd).
 
 Subsequent versions of the AFP will allow for additional types of products to be created such as perpetuals, and more.
 

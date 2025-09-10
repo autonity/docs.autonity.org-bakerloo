@@ -3,7 +3,7 @@ project:
   output-dir: _site
 
 website:
-  title: "Autonity Documentation"
+  title: "Autonomous Futures Protocol Documentation"
   repo-url: https://github.com/clearmatics/proto-afp
   page-navigation: true
   favicon: ./_assets/favicon.svg
@@ -14,56 +14,55 @@ website:
       - icon: github
         menu:
           - text: Source Code
-            href:  https://github.com/clearmatics/proto-afp
+            href: https://github.com/clearmatics/proto-afp
   sidebar:
     style: "docked"
     search: true
+    collapse-level: 1
     contents:
-      - section: "Autonomous Futures Protocol"
+      - file: afp/about-afp.qmd
         contents:
-          - file: afp/about-afp.qmd
-            contents:
-              - file: afp/architecture.qmd
-          - file: afp/getting-started.qmd
-          - file: afp/clearing-system.qmd
-            contents:
-                - file: afp/margin-intent-accounts.qmd
-                - file: afp/liquidation.qmd
-                - file: afp/bankruptcy.qmd
-                - file: afp/margining.qmd
-                - file: afp/mark-price.qmd
-                - file: afp/final-settlement-price.qmd    
-                - file: afp/final-settlement-process.qmd    
-          - file: afp/fees.qmd
-            contents:
-                - file: afp/trading-fees.qmd
-                - file: afp/clearing-fees.qmd
-          - file: afp/products.qmd
-            contents:
-                - file: afp/how-to-create-a-product.qmd
-                - file: afp/product-specification.qmd
-                - file: afp/product-builders.qmd
-                - file: afp/product-lifecycle.qmd
-                - file: afp/product-tokenomics.qmd
-          - file: afp/trading-protocols.qmd
-            contents:
-                - file: afp/how-to-integrate-a-trading-protocol.qmd
-                - file: afp/the-roles-of-trading-protocols.qmd
-                - file: afp/fallback-mechanism.qmd
-          - file: afp/trading.qmd
-            contents:
-                - file: afp/trade-execution-and-clearing.qmd
-                - file: afp/cross-venue-cross-margining.qmd 
-                - file: afp/intents.qmd
-          - file: afp/oracles.qmd
-            contents:
-                - file: afp/how-to-integrate-an-oracle.qmd
-                - file: afp/oracle-interface.qmd 
-          - file: afp/onchain-agents.qmd
-            contents:
-                - file: afp/final-settlement-price-agent.qmd
-                - file: afp/closeout-agent.qmd    
-                - file: afp/liquidation-agent.qmd    
+          - file: afp/architecture.qmd
+      - file: afp/getting-started.qmd
+      - file: afp/clearing-system.qmd
+        contents:
+          - file: afp/margin-intent-accounts.qmd
+          - file: afp/liquidation.qmd
+          - file: afp/bankruptcy.qmd
+          - file: afp/margining.qmd
+          - file: afp/mark-price.qmd
+          - file: afp/final-settlement-price.qmd
+          - file: afp/final-settlement-process.qmd
+      - file: afp/fees.qmd
+        contents:
+          - file: afp/trading-fees.qmd
+          - file: afp/clearing-fees.qmd
+      - file: afp/products.qmd
+        contents:
+          - file: afp/how-to-create-a-product.qmd
+          - file: afp/product-specification.qmd
+          - file: afp/product-builders.qmd
+          - file: afp/product-lifecycle.qmd
+          - file: afp/product-tokenomics.qmd
+      - file: afp/trading-protocols.qmd
+        contents:
+          - file: afp/how-to-integrate-a-trading-protocol.qmd
+          - file: afp/the-roles-of-trading-protocols.qmd
+          - file: afp/fallback-mechanism.qmd
+      - file: afp/trading.qmd
+        contents:
+          - file: afp/trade-execution-and-clearing.qmd
+          - file: afp/cross-venue-cross-margining.qmd
+          - file: afp/intents.qmd
+      - file: afp/oracles.qmd
+        contents:
+          - file: afp/how-to-integrate-an-oracle.qmd
+          - file: afp/oracle-interface.qmd
+      - file: afp/onchain-agents.qmd
+        contents:
+          - file: afp/final-settlement-price-agent.qmd
+          - file: afp/closeout-agent.qmd
+          - file: afp/liquidation-agent.qmd
       - file: afp/glossary.qmd
       - section: "For Developers"
         contents:
@@ -72,10 +71,14 @@ website:
               - file: afp/afp-sdk-reference.qmd
               - file: afp/afp-sdk-bindings-reference.qmd
           - file: afp/afp-smart-contract-reference.qmd
-            
   page-footer:
-    left: "© 2025 AFP Project"
-    right: "Built with Quarto"
+    left:
+      - icon: github
+        href: https://github.com/autonity/
+      - icon: twitter-x
+        href: https://x.com/autonity_
+      - icon: discord
+        href: https://discord.com/invite/autonity
 
 format:
   html:
@@ -83,6 +86,7 @@ format:
       light: [cosmo, _theme/theme.scss]
     css:
       - _assets/css/styles.css
+      - _assets/css/custom.css
     code-copy: true
     code-overflow: wrap
     toc: true

@@ -8,7 +8,7 @@ The AFP exposes a novel suite of products that previously could not be traded so
 Before you can implement a trading protocol, ensure you have:
 
 - **A margin account for each of the collateral assets your listed products require.** For example, if the products you intend to list on your protocol use USDC and ATN as collateral assets, you must have Margin Accounts in those assets.
-- **An interface to accept intents.** The AFP uses an intent centric architecture and allows for a gasless trading experience for the end user. Your trading protocol must take [Intents](/intents.qmd) as input.
+- **An interface to accept intents.** The AFP uses an intent centric architecture and allows for a gasless trading experience for the end user. Your trading protocol must take [Intents](/afp/intents.qmd) as input.
 - **An output that conforms to the expected trade object.** The AFP expects trades to be represented in a specific way before they can be cleared.
 
 ## Integrating your Trading Protocol

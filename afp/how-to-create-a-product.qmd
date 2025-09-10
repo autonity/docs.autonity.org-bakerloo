@@ -13,7 +13,7 @@ Before you can create a product on the Autonomous Futures Protocol (AFP), ensure
     `function initializeMarginAccount(address collateralAsset) public returns (IMarginAccount)`
     
     on the `MarginAccountRegistry.sol` contract. This ensures that traders can easily deposit collateral and start trading without requiring them to do the Margin Account contract deployment themselves.
-- **A Margin Account in the collateral asset of the product you will create** as this is where clearing fees will be credited to. For more information on creating a Margin Account, see [How to create and fund a margin account on the AFP](/getting-started.qmd#how-to-create-and-fund-a-margin-account-on-the-afp)
+- **A Margin Account in the collateral asset of the product you will create** as this is where clearing fees will be credited to. For more information on creating a Margin Account, see [How to create and fund a margin account on the AFP](/afp/getting-started.qmd#how-to-create-and-fund-a-margin-account-on-the-afp)
 - **Read through the documentation** as understanding how products work in the AFP is crucial to creating a successful one in the first place!
 
 
@@ -25,7 +25,7 @@ Before you can create a product on the Autonomous Futures Protocol (AFP), ensure
 1. **Decide on a timeseries** that your product will trade. Ensure there is a reliable, undisputable source of truth for the timeseries that oracles will be able to use to report a final settlement value.
    
 2. **Construct the Product Specification**
-   - Prepare a valid [`Product`](/product-specification.qmd#product-specification-for-dated-futures) struct with all required fields. There is no one-size-fits-all set of parameters that can be specified as each product is unique.
+   - Prepare a valid [`Product`](/afp/product-specification.qmd#product-specification-for-dated-futures) struct with all required fields. There is no one-size-fits-all set of parameters that can be specified as each product is unique.
    - **Important:** the same builder cannot create two products with the same symbol!
 
 3. **Register the Product**

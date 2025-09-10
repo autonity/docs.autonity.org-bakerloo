@@ -1,0 +1,18 @@
+/* Remove whitespace above the sidebar */
+#quarto-sidebar {
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+}
+
+/* Ensure the sidebar content starts at the top */
+#quarto-sidebar .sidebar-menu-container {
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+}
+
+/* Adjust the header to reduce space */
+#quarto-header {
+  min-height: 60px;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
